@@ -2,18 +2,18 @@ define([
   'jquery',
   'underscore',
   'backbone','i18n!nls/strings',
-  'text!templates/home/index.html'',
+  'text!templates/home/index.html',
   'models/question'
 ], function($, _, Backbone, strings, homeTemplate){
 
-  var view = Backbone.View.extend({
+  var indexView = Backbone.View.extend({
     tagName: 'li',
     initialize: function(){
-      this.template = _.template( homeView );
+      this.template = _.template( homeTemplate );
     },
 
     events: {
-      'click span.name': 'view'
+   
     },
    
     render: function(){
@@ -28,5 +28,5 @@ define([
     }
   });
 
-  return view;
+  return indexView;
 });

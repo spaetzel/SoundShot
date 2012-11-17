@@ -4,7 +4,7 @@ require.config({
     jqueryUi: 'libs/jquery/jquery-ui.min',
     underscore: 'libs/underscore/underscore-min',
     backbone: 'libs/backbone/backbone-optamd3-min',
-    cordova: 'libs/cordova/cordova-2.2.0'
+  //  cordova: 'libs/cordova/cordova-2.2.0',
     text: 'libs/require/text',
     i18n: 'libs/require/i18n',
     templates: '../templates',

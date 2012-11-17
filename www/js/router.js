@@ -1,7 +1,7 @@
 var router;
 
 //Filename: router.js
-define(['jquery', 'underscore', 'backbone', 'views/home/index', 'models/question', 'views/questions/view'], function($, _, Backbone, mainHomeView, questionModel, questionViewView, subjectsView) {
+define(['jquery', 'underscore', 'backbone', 'views/home/index'], function($, _, Backbone, mainHomeView ) {
 	var AppRouter = Backbone.Router.extend({
 		routes: {
 			':source/:level/types/True/false': 'showTrueFalse',
