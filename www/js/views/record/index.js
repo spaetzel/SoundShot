@@ -1,13 +1,12 @@
 define(['jquery', 'underscore',
 
-'backbone', 'i18n!nls/strings', 'text!templates/record/index.html', ], function($, _, Backbone, strings, recordTemplate) {
+'backbone', 'i18n!nls/strings', 'text!templates/record/index.html', 'collections/audioClips'], function($, _, Backbone, strings, playbackTemplate, audioClipsCollection) {
 
   var recordIndex = Backbone.View.extend({
     tagName: 'li',
     initialize: function() {
-      this.template = _.template(recordTemplate);
+      this.template = _.template(playbackTemplate);
     },
-
     events: {
       'click #startRecord': 'startRecordingAudio',
       'click #stopRecord': 'stopRecordingAudio',
@@ -22,18 +21,13 @@ define(['jquery', 'underscore',
       }));
 
 
-
       return this;
-
-
-
     },
     takePhoto: function() {
       navigator.camera.getPicture(function(imageURI) {
         $('#previewImage').attr('src', imageURI);
-        // Resuem the recording
-        self.recordAudio();
-
+        // Resume the recording
+        //        self.recordAudio();
       }
 
       , this.onFail, {
@@ -50,23 +44,46 @@ define(['jquery', 'underscore',
 
       $('#stopRecord').hide();
       $('#playAudio').show();
+
+      self.model.save({
+        duration: self.mediaVar.getDuration()
+      });
     },
     startRecordingAudio: function() {
       $('#startRecord').hide();
       $('#takePhoto').show();
 
-      var src = 'test.wav';
+      var id = new Date().getTime();
 
+      var src = id + '.wav';
 
       var self = this;
 
       this.setAudioPosition('Recording started');
 
+      self.model = self.saveModel(id, src);
+
+
       // Record some audio
       this.createFile(src, function() {
+        self.model = self.saveModel(id, src);
 
         self.recordAudio();
       });
+    },
+    saveModel: function(id, src) {
+      self.model = {
+        id: id,
+        src: src,
+        startTime: new Date().getTime(),
+        duration: 0
+      };
+
+      var collection = new audioClipsCollection();
+
+      collection.create(self.model);
+
+
     },
     createFile: function(src, callback) {
 
@@ -86,13 +103,12 @@ define(['jquery', 'underscore',
           callback();
         }, self.onError); //of getFile
       }, self.onError); //of requestFileSystem
-
     },
     onError: function(error) {
       alert(JSON.stringify(error));
     },
     recordAudio: function() {
-          $('#stopRecord').show();
+      $('#stopRecord').show();
 
       var self = this;
 
@@ -106,11 +122,10 @@ define(['jquery', 'underscore',
       var recInterval = setInterval(function() {
         recTime = recTime + 1;
         self.setAudioPosition('Recorded ' + recTime + " seconds");
-        if( self.mediaStatus != 'recording' ) {
+        if(self.mediaStatus != 'recording') {
 
           clearInterval(recInterval);
-   //       self.mediaVar.stopRecord();
-
+          //       self.mediaVar.stopRecord();
           //           self.playAudio(mediaRec);
         }
       }, 1000);
@@ -133,7 +148,7 @@ define(['jquery', 'underscore',
         recTime = recTime + 1;
         self.setAudioPosition("play " + recTime + " sec");
 
-        if( recTime >= self.mediaVar.getDuration() ){
+        if(recTime >= self.mediaVar.getDuration()) {
           self.setAudioPosition('Done');
           self.mediaStatus = 'stopped';
         }
