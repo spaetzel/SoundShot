@@ -24,21 +24,7 @@ define([
         	}
         ));
 
-      alert(navigator);
-        alert(navigator.compass);
-        try{
-            navigator.compass.getCurrentHeading(function(heading){
-            alert('Heading: ' + heading.magneticHeading);
-          }, 
-          function( compassError){
-             alert('Compass Error: ' + compassError.code);
-           }
-           );
-        }catch(ex){
-            alert(ex);
-
-        }
-        
+      
 
       return this;
     },
