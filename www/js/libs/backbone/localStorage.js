@@ -35,6 +35,7 @@ Backbone.LocalStorage = window.Store = function(name) {
   this.records = (store && store.split(",")) || [];
 };
 
+
 _.extend(Backbone.LocalStorage.prototype, {
 
   // Save the current state of the **Store** to *localStorage*.

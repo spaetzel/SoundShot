@@ -24,7 +24,40 @@ define([
         	}
         ));
 
-      
+       var Library = Backbone.Collection.extend({
+        localStorage: new Backbone.LocalStorage("libraryStore")
+        
+        // is the problem with my library that is has no model reference?
+    });
+
+console.log(Backbone.LocalStorage);
+
+    var attrs = {
+        id: new Date().getTime(),
+        title  : 'The Tempest',
+        author : 'Bill Shakespeare',
+        length : 123
+    };
+    
+    var library = null;
+
+         //   window.localStorage.clear();
+            library = new Library();
+    
+
+        console.log(library.length, 0, 'empty initially');
+        library.fetch();
+        console.log(library.length, 0, 'empty read');
+    
+
+    library.create(attrs);
+
+    console.log(library.length, 0, 'empty read');
+
+
+alert(library.length);
+
+
 
       return this;
     },
