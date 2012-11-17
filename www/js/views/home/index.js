@@ -3,8 +3,8 @@ define([
   'underscore',
   'backbone','i18n!nls/strings',
   'text!templates/home/index.html',
-  'models/question'
-], function($, _, Backbone, strings, homeTemplate){
+  'views/record/index'
+], function($, _, Backbone, strings, homeTemplate, startRecordingView){
 
   var indexView = Backbone.View.extend({
     tagName: 'li',
@@ -13,9 +13,9 @@ define([
     },
 
     events: {
-   
-    },
-   
+      'click #startRecording': 'startRecording',
+      'click #viewRecordings': 'viewRecordings'
+    },   
     render: function(){
       $(this.el).html( 
         this.template( 
@@ -24,7 +24,35 @@ define([
         	}
         ));
 
+      alert(navigator);
+        alert(navigator.compass);
+        try{
+            navigator.compass.getCurrentHeading(function(heading){
+            alert('Heading: ' + heading.magneticHeading);
+          }, 
+          function( compassError){
+             alert('Compass Error: ' + compassError.code);
+           }
+           );
+        }catch(ex){
+            alert(ex);
+
+        }
+        
+
       return this;
+    },
+    startRecording: function(){
+      console.log('start');
+
+      var view = new startRecordingView({
+        el: this.el
+      });
+      view.render();
+      
+    },
+    viewRecordings: function(){
+
     }
   });
 

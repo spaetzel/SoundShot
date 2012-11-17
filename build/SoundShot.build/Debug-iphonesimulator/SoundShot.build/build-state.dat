@@ -1,624 +1,0 @@
-TSoundShot
-v5
-r1
-cCheck dependencies
-cProcessInfoPlistFile /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Info.plist SoundShot/SoundShot-Info.plist
-cPhaseScriptExecution "Touch www folder" /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Script-304B58A110DAC018002A0835.sh
-cCpResource www cordova/../build/SoundShot.app/www
-cCopyPlistFile /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Cordova.plist SoundShot/Resources/../Cordova.plist
-cCpResource SoundShot/Resources/icons/icon-72.png cordova/../build/SoundShot.app/icon-72.png
-cCpResource SoundShot/Resources/icons/icon.png cordova/../build/SoundShot.app/icon.png
-cCpResource SoundShot/Resources/icons/icon@2x.png cordova/../build/SoundShot.app/icon@2x.png
-cCpResource SoundShot/Resources/Capture.bundle cordova/../build/SoundShot.app/Capture.bundle
-cCopyStringsFile /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/en.lproj/Localizable.strings SoundShot/Resources/en.lproj/Localizable.strings
-cCopyStringsFile /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/es.lproj/Localizable.strings SoundShot/Resources/es.lproj/Localizable.strings
-cCompileXIB /Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/MainViewController.xib
-cCopyStringsFile /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/de.lproj/Localizable.strings SoundShot/Resources/de.lproj/Localizable.strings
-cCopyStringsFile /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/se.lproj/Localizable.strings SoundShot/Resources/se.lproj/Localizable.strings
-cCpResource SoundShot/Resources/splash/Default-Landscape@2x~ipad.png cordova/../build/SoundShot.app/Default-Landscape@2x~ipad.png
-cCpResource SoundShot/Resources/splash/Default-Landscape~ipad.png cordova/../build/SoundShot.app/Default-Landscape~ipad.png
-cCpResource SoundShot/Resources/splash/Default-Portrait@2x~ipad.png cordova/../build/SoundShot.app/Default-Portrait@2x~ipad.png
-cCpResource SoundShot/Resources/splash/Default-Portrait~ipad.png cordova/../build/SoundShot.app/Default-Portrait~ipad.png
-cCpResource SoundShot/Resources/splash/Default@2x~iphone.png cordova/../build/SoundShot.app/Default@2x~iphone.png
-cCpResource SoundShot/Resources/splash/Default~iphone.png cordova/../build/SoundShot.app/Default~iphone.png
-cCpResource SoundShot/Resources/splash/Default-568h@2x~iphone.png cordova/../build/SoundShot.app/Default-568h@2x~iphone.png
-cProcessPCH /var/folders/b3/gb28h3551w36d8dw6_s_k46h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SoundShot-Prefix-csbypibkqmfyyfehliurrfwzqptb/SoundShot-Prefix.pch.pth SoundShot/SoundShot-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/AppDelegate.o /Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/main.o /Users/wspaetzel/Projects/SoundShot/SoundShot/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/MainViewController.o /Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cLd /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/SoundShot normal i386
-cGenerateDSYMFile /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app.dSYM /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/SoundShot
-cTouch /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk
-c0000000050944A180000000000000110
-t1351895576
-s272
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
-c00000000505A9A4600000000001EAFC0
-t1348115014
-s2011072
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/AddressBook.framework/AddressBook
-c00000000505A9A4600000000000C0EF0
-t1348115014
-s790256
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/AddressBookUI.framework/AddressBookUI
-c00000000505A9A460000000000193640
-t1348115014
-s1652288
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
-c00000000505A9A4600000000003D2B80
-t1348115014
-s4008832
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
-c00000000505A9A470000000000215D60
-t1348115015
-s2186592
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c00000000505A9A470000000000228FD0
-t1348115015
-s2265040
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
-c00000000505A9A47000000000009C220
-t1348115015
-s639520
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia
-c00000000505A9A470000000000085620
-t1348115015
-s546336
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c00000000505A9A4900000000003DCEF0
-t1348115017
-s4050672
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/MediaPlayer.framework/MediaPlayer
-c00000000505A9A4B00000000002C6C10
-t1348115019
-s2911248
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
-c00000000505A9A4B00000000000BCB50
-t1348115019
-s772944
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
-c00000000505A9A4C00000000001D57A0
-t1348115020
-s1922976
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
-c00000000505A9A4C000000000006CC50
-t1348115020
-s445520
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c00000000505A9A4E0000000000AB3D60
-t1348115022
-s11222368
-
-N/Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/AppDelegate.m
-c0000000050A7AB3E00000000000015A8
-t1353165630
-s5544
-
-N/Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/MainViewController.m
-c0000000050A7AB3E00000000000012F3
-t1353165630
-s4851
-
-N/Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/MainViewController.xib
-c0000000050A7AB3E0000000000001759
-t1353165630
-s5977
-
-N/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/../Cordova.plist
-c0000000050A7AB3E0000000000000A33
-t1353165630
-s2611
-
-N/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/Capture.bundle
-c0000000050A7AB3E000000000000030E
-t1353165630
-s782
-
-N/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/de.lproj/Localizable.strings
-c0000000050A7AB3E0000000000000485
-t1353165630
-s1157
-
-N/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/en.lproj/Localizable.strings
-c0000000050A7AB3E0000000000000470
-t1353165630
-s1136
-
-N/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/es.lproj/Localizable.strings
-c0000000050A7AB3E000000000000047D
-t1353165630
-s1149
-
-N/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/icons/icon-72.png
-c0000000050A7AB3E0000000000001350
-t1353165630
-s4944
-
-N/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/icons/icon.png
-c0000000050A7AB3E0000000000000F3E
-t1353165630
-s3902
-
-N/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/icons/icon@2x.png
-c0000000050A7AB3E0000000000001EBD
-t1353165630
-s7869
-
-N/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/se.lproj/Localizable.strings
-c0000000050A7AB3E0000000000000471
-t1353165630
-s1137
-
-N/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/splash/Default-568h@2x~iphone.png
-c0000000050A7AB3E0000000000055EBB
-t1353165630
-s351931
-
-N/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/splash/Default-Landscape@2x~ipad.png
-c0000000050A7AB3E0000000000176888
-t1353165630
-s1534088
-
-N/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/splash/Default-Landscape~ipad.png
-c0000000050A7AB3E00000000000674B7
-t1353165630
-s423095
-
-N/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/splash/Default-Portrait@2x~ipad.png
-c0000000050A7AB3E00000000001892C2
-t1353165630
-s1610434
-
-N/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/splash/Default-Portrait~ipad.png
-c0000000050A7AB3E0000000000066F23
-t1353165630
-s421667
-
-N/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/splash/Default@2x~iphone.png
-c0000000050A7AB3E0000000000055981
-t1353165630
-s350593
-
-N/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/splash/Default~iphone.png
-c0000000050A7AB3E0000000000016EC9
-t1353165630
-s93897
-
-N/Users/wspaetzel/Projects/SoundShot/SoundShot/SoundShot-Prefix.pch
-c0000000050A7AB3E00000000000003C3
-t1353165630
-s963
-
-N/Users/wspaetzel/Projects/SoundShot/SoundShot/main.m
-c0000000050A7AB3E000000000000045B
-t1353165630
-s1115
-
-N/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/AppDelegate.o
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/MainViewController.o
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/SoundShot.LinkFileList
-c0000000050A7ABDC0000000000000186
-t1353165788
-s390
-
-N/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/main.o
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Script-304B58A110DAC018002A0835.sh
-c0000000050A7ABDC0000000000000027
-t1353165788
-s39
-
-N/Users/wspaetzel/Projects/SoundShot/build/libCordova.a
-c0000000050A7ABDC0000000000319298
-t1353165788
-s3248792
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app.dSYM
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Capture.bundle
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Cordova.plist
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Default-568h@2x~iphone.png
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Default-Landscape@2x~ipad.png
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Default-Landscape~ipad.png
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Default-Portrait@2x~ipad.png
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Default-Portrait~ipad.png
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Default@2x~iphone.png
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Default~iphone.png
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Info.plist
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/MainViewController.nib
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/PkgInfo
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/SoundShot
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/de.lproj/Localizable.strings
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/en.lproj/Localizable.strings
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/es.lproj/Localizable.strings
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/icon-72.png
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/icon.png
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/icon@2x.png
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/se.lproj/Localizable.strings
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/www
-t2
-s0
-
-N/Users/wspaetzel/Projects/SoundShot/www
-c0000000050A7ABA10000000000000154
-t1353165729
-s340
-
-N/var/folders/b3/gb28h3551w36d8dw6_s_k46h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SoundShot-Prefix-csbypibkqmfyyfehliurrfwzqptb/SoundShot-Prefix.pch.pth
-t2
-s0
-
-NSoundShot/SoundShot-Info.plist
-c0000000050A7AB3E00000000000009BE
-t1353165630
-s2494
-
-CCheck dependencies
-r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesb743275ce357b641^a455295ce357b641^---0#1#0#--18"Check dependencies36"B520C151-7B1A-4BC8-99E2-222A09BCB20C-
-
-CCompileC build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/AppDelegate.o /Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s374858588.571593
-e374858588.663420
-r1
-xCompileC
-xbuild/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/AppDelegate.o
-x/Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/AppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-o/Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/AppDelegate.m:73:25: warning: 'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url. [-Wdeprecated-declarations]
-o    self.viewController.invokeString = invokeString;
-o                        ^
-o/Users/wspaetzel/Projects/SoundShot/cordova/../build/include/Cordova/CDVViewController.h:43:50: note: 'invokeString' declared here
-o@property (nonatomic, readwrite, copy)NSString * invokeString CDV_DEPRECATED(2.0, "Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url.");
-o                                                 ^
-o1 warning generated.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/AppDelegate.m83a1925ce357b641^4ed5a95ce357b641^-747"/Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/AppDelegate.m:73:25: warning: 'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url. [-Wdeprecated-declarations]    self.viewController.invokeString = invokeString;                        ^/Users/wspaetzel/Projects/SoundShot/cordova/../build/include/Cordova/CDVViewController.h:43:50: note: 'invokeString' declared here@property (nonatomic, readwrite, copy)NSString * invokeString CDV_DEPRECATED(2.0, "Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url.");                                                 ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@161"'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url.-374858588#18446744073709551615#0#1(2@28"'invokeString' declared here-374858588#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@90"file://localhost/Users/wspaetzel/Projects/SoundShot/CordovaLib/Classes/CDVViewController.h0000000000000000^42#49#42#49#1597#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@83"file://localhost/Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/AppDelegate.m0000000000000000^72#24#72#24#2388#0#12"Deprecations--0#0#0#-19%DVTDocumentLocation4@83"file://localhost/Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/AppDelegate.m0000000000000000^3450"CompileC build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/AppDelegate.o SoundShot/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/wspaetzel/Projects/SoundShot    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=4.3 -iquote /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/SoundShot-generated-files.hmap -I/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/SoundShot-own-target-headers.hmap -I/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/SoundShot-all-target-headers.hmap -iquote /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/SoundShot-project-headers.hmap -I/Users/wspaetzel/Projects/SoundShot/cordova/../build/include -I/Users/wspaetzel/Projects/SoundShot/cordova/../build/usr/local/lib/include -I/Users/wspaetzel/Projects/SoundShot/build/UninstalledProducts/include -I/Users/wspaetzel/Projects/SoundShot/cordova/../build -I/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/DerivedSources/i386 -I/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/DerivedSources -F/Users/wspaetzel/Projects/SoundShot/cordova/../build -include /var/folders/b3/gb28h3551w36d8dw6_s_k46h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SoundShot-Prefix-csbypibkqmfyyfehliurrfwzqptb/SoundShot-Prefix.pch -MMD -MT dependencies -MF /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/AppDelegate.dia -c /Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/AppDelegate.m -o /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/AppDelegate.o36"954F56BC-9904-4A42-97E9-AB761936780A-
-
-CCompileC build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/MainViewController.o /Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s374858588.571624
-e374858588.650410
-r1
-xCompileC
-xbuild/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/MainViewController.o
-x/Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/MainViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-o/Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/MainViewController.m:125:14: warning: 'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url. [-Wdeprecated-declarations]
-o    if (self.invokeString) {
-o             ^
-o/Users/wspaetzel/Projects/SoundShot/cordova/../build/include/Cordova/CDVViewController.h:43:50: note: 'invokeString' declared here
-o@property (nonatomic, readwrite, copy)NSString * invokeString CDV_DEPRECATED(2.0, "Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url.");
-o                                                 ^
-o/Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/MainViewController.m:128:93: warning: 'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url. [-Wdeprecated-declarations]
-o        NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
-o                                                                                            ^
-o2 warnings generated.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/MainViewController.m76a4925ce357b641^9582a65ce357b641^-1204"/Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/MainViewController.m:125:14: warning: 'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url. [-Wdeprecated-declarations]    if (self.invokeString) {             ^/Users/wspaetzel/Projects/SoundShot/cordova/../build/include/Cordova/CDVViewController.h:43:50: note: 'invokeString' declared here@property (nonatomic, readwrite, copy)NSString * invokeString CDV_DEPRECATED(2.0, "Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url.");                                                 ^/Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/MainViewController.m:128:93: warning: 'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url. [-Wdeprecated-declarations]        NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];                                                                                            ^2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@161"'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url.-374858588#18446744073709551615#0#1(2@28"'invokeString' declared here-374858588#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@90"file://localhost/Users/wspaetzel/Projects/SoundShot/CordovaLib/Classes/CDVViewController.h0000000000000000^42#49#42#49#1597#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@90"file://localhost/Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/MainViewController.m0000000000000000^124#13#124#13#3604#0#12"Deprecations--2@161"'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url.-374858588#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@90"file://localhost/Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/MainViewController.m0000000000000000^127#92#127#92#4015#0#12"Deprecations--0#0#0#-19%DVTDocumentLocation4@90"file://localhost/Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/MainViewController.m0000000000000000^3492"CompileC build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/MainViewController.o SoundShot/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/wspaetzel/Projects/SoundShot    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=4.3 -iquote /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/SoundShot-generated-files.hmap -I/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/SoundShot-own-target-headers.hmap -I/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/SoundShot-all-target-headers.hmap -iquote /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/SoundShot-project-headers.hmap -I/Users/wspaetzel/Projects/SoundShot/cordova/../build/include -I/Users/wspaetzel/Projects/SoundShot/cordova/../build/usr/local/lib/include -I/Users/wspaetzel/Projects/SoundShot/build/UninstalledProducts/include -I/Users/wspaetzel/Projects/SoundShot/cordova/../build -I/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/DerivedSources/i386 -I/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/DerivedSources -F/Users/wspaetzel/Projects/SoundShot/cordova/../build -include /var/folders/b3/gb28h3551w36d8dw6_s_k46h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SoundShot-Prefix-csbypibkqmfyyfehliurrfwzqptb/SoundShot-Prefix.pch -MMD -MT dependencies -MF /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/MainViewController.d --serialize-diagnostics /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/MainViewController.dia -c /Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/MainViewController.m -o /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/MainViewController.o36"DB62C239-8ABC-43D0-9341-0D8D7BDD294D-
-
-CCompileC build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/main.o /Users/wspaetzel/Projects/SoundShot/SoundShot/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s374858588.571620
-e374858588.609356
-r1
-xCompileC
-xbuild/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/main.o
-x/Users/wspaetzel/Projects/SoundShot/SoundShot/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Compile /Users/wspaetzel/Projects/SoundShot/SoundShot/main.m57b3925ce357b641^390a9c5ce357b641^---0#0#0#-19%DVTDocumentLocation2@68"file://localhost/Users/wspaetzel/Projects/SoundShot/SoundShot/main.m0000000000000000^3392"CompileC build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/main.o SoundShot/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/wspaetzel/Projects/SoundShot    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=4.3 -iquote /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/SoundShot-generated-files.hmap -I/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/SoundShot-own-target-headers.hmap -I/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/SoundShot-all-target-headers.hmap -iquote /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/SoundShot-project-headers.hmap -I/Users/wspaetzel/Projects/SoundShot/cordova/../build/include -I/Users/wspaetzel/Projects/SoundShot/cordova/../build/usr/local/lib/include -I/Users/wspaetzel/Projects/SoundShot/build/UninstalledProducts/include -I/Users/wspaetzel/Projects/SoundShot/cordova/../build -I/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/DerivedSources/i386 -I/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/DerivedSources -F/Users/wspaetzel/Projects/SoundShot/cordova/../build -include /var/folders/b3/gb28h3551w36d8dw6_s_k46h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SoundShot-Prefix-csbypibkqmfyyfehliurrfwzqptb/SoundShot-Prefix.pch -MMD -MT dependencies -MF /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/main.dia -c /Users/wspaetzel/Projects/SoundShot/SoundShot/main.m -o /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/main.o36"39901835-4541-4F8A-A5AD-B52C25B188A2-
-
-CCompileXIB /Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/MainViewController.xib
-s374858588.232678
-e374858588.254164
-r1
-xCompileXIB
-x/Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/MainViewController.xib
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compiling /Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/MainViewController.xib74b33b5ce357b641^8c11415ce357b641^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/MainViewController.xib0000000000000000^916"CompileXIB SoundShot/Classes/MainViewController.xib    cd /Users/wspaetzel/Projects/SoundShot    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/MainViewController.nib /Users/wspaetzel/Projects/SoundShot/SoundShot/Classes/MainViewController.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk36"63808861-66EF-45A2-A6B9-84C63C719924-
-
-CCopyPlistFile /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Cordova.plist SoundShot/Resources/../Cordova.plist
-s374858588.217169
-e374858588.221320
-r1
-xCopyPlistFile
-x/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Cordova.plist
-xSoundShot/Resources/../Cordova.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy SoundShot/Resources/../Cordova.plistf1bd375ce357b641^86ae385ce357b641^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/../Cordova.plist0000000000000000^505"CopyPlistFile cordova/../build/SoundShot.app/Cordova.plist SoundShot/Resources/../Cordova.plist    cd /Users/wspaetzel/Projects/SoundShot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copyPlist --convert binary1 --outdir /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app -- SoundShot/Resources/../Cordova.plist36"AB593496-8378-4209-95AC-3333966B1914-
-
-CCopyStringsFile /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/de.lproj/Localizable.strings SoundShot/Resources/de.lproj/Localizable.strings
-s374858588.232717
-e374858588.251890
-r1
-xCopyStringsFile
-x/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/de.lproj/Localizable.strings
-xSoundShot/Resources/de.lproj/Localizable.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Copy SoundShot/Resources/de.lproj/Localizable.stringsc4b43b5ce357b641^ae82405ce357b641^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/de.lproj/Localizable.strings0000000000000000^596"CopyStringsFile cordova/../build/SoundShot.app/de.lproj/Localizable.strings SoundShot/Resources/de.lproj/Localizable.strings    cd /Users/wspaetzel/Projects/SoundShot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/de.lproj -- SoundShot/Resources/de.lproj/Localizable.strings36"2E3A7250-7469-4AFB-97A2-81C08DD39B33-
-
-CCopyStringsFile /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/en.lproj/Localizable.strings SoundShot/Resources/en.lproj/Localizable.strings
-s374858588.225309
-e374858588.243886
-r1
-xCopyStringsFile
-x/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/en.lproj/Localizable.strings
-xSoundShot/Resources/en.lproj/Localizable.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Copy SoundShot/Resources/en.lproj/Localizable.strings4be5395ce357b641^c66f3e5ce357b641^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/en.lproj/Localizable.strings0000000000000000^596"CopyStringsFile cordova/../build/SoundShot.app/en.lproj/Localizable.strings SoundShot/Resources/en.lproj/Localizable.strings    cd /Users/wspaetzel/Projects/SoundShot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/en.lproj -- SoundShot/Resources/en.lproj/Localizable.strings36"203A844A-8BEB-4A6A-911E-E0792674A8E0-
-
-CCopyStringsFile /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/es.lproj/Localizable.strings SoundShot/Resources/es.lproj/Localizable.strings
-s374858588.226708
-e374858588.251008
-r1
-xCopyStringsFile
-x/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/es.lproj/Localizable.strings
-xSoundShot/Resources/es.lproj/Localizable.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Copy SoundShot/Resources/es.lproj/Localizable.stringsd8293a5ce357b641^6a4c405ce357b641^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/es.lproj/Localizable.strings0000000000000000^596"CopyStringsFile cordova/../build/SoundShot.app/es.lproj/Localizable.strings SoundShot/Resources/es.lproj/Localizable.strings    cd /Users/wspaetzel/Projects/SoundShot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/es.lproj -- SoundShot/Resources/es.lproj/Localizable.strings36"0D848113-39DD-4A4B-8EC4-3E644D306E79-
-
-CCopyStringsFile /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/se.lproj/Localizable.strings SoundShot/Resources/se.lproj/Localizable.strings
-s374858588.245333
-e374858588.252144
-r1
-xCopyStringsFile
-x/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/se.lproj/Localizable.strings
-xSoundShot/Resources/se.lproj/Localizable.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Copy SoundShot/Resources/se.lproj/Localizable.strings4be43e5ce357b641^508c405ce357b641^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/se.lproj/Localizable.strings0000000000000000^596"CopyStringsFile cordova/../build/SoundShot.app/se.lproj/Localizable.strings SoundShot/Resources/se.lproj/Localizable.strings    cd /Users/wspaetzel/Projects/SoundShot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/se.lproj -- SoundShot/Resources/se.lproj/Localizable.strings36"E29063BC-8D8D-4304-86E4-882A1D61CFC0-
-
-CCpResource SoundShot/Resources/Capture.bundle cordova/../build/SoundShot.app/Capture.bundle
-s374858588.222714
-e374858588.232413
-r1
-xCpResource
-xSoundShot/Resources/Capture.bundle
-xcordova/../build/SoundShot.app/Capture.bundle
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Copy cordova/../build/SoundShot.app/Capture.bundlecb2d395ce357b641^13803b5ce357b641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Capture.bundle000000000080d041^595"CpResource SoundShot/Resources/Capture.bundle cordova/../build/SoundShot.app/Capture.bundle    cd /Users/wspaetzel/Projects/SoundShot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/Capture.bundle /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app36"D7CAB2AF-D36B-4212-8546-BDFB6F119FF5-
-
-CCpResource SoundShot/Resources/icons/icon-72.png cordova/../build/SoundShot.app/icon-72.png
-s374858588.217212
-e374858588.222284
-r1
-xCpResource
-xSoundShot/Resources/icons/icon-72.png
-xcordova/../build/SoundShot.app/icon-72.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Copy cordova/../build/SoundShot.app/icon-72.png23ba375ce357b641^42e8385ce357b641^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/icon-72.png000000000080d041^598"CpResource SoundShot/Resources/icons/icon-72.png cordova/../build/SoundShot.app/icon-72.png    cd /Users/wspaetzel/Projects/SoundShot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/icons/icon-72.png /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app36"8370B626-203D-462A-AE56-EC9788A1C06B-
-
-CCpResource SoundShot/Resources/icons/icon.png cordova/../build/SoundShot.app/icon.png
-s374858588.217618
-e374858588.223942
-r1
-xCpResource
-xSoundShot/Resources/icons/icon.png
-xcordova/../build/SoundShot.app/icon.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Copy cordova/../build/SoundShot.app/icon.png20d2375ce357b641^4358395ce357b641^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/icon.png000000000080d041^589"CpResource SoundShot/Resources/icons/icon.png cordova/../build/SoundShot.app/icon.png    cd /Users/wspaetzel/Projects/SoundShot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/icons/icon.png /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app36"9CE7DD3B-2312-40B5-9E38-AFF201412320-
-
-CCpResource SoundShot/Resources/icons/icon@2x.png cordova/../build/SoundShot.app/icon@2x.png
-s374858588.222624
-e374858588.225491
-r1
-xCpResource
-xSoundShot/Resources/icons/icon@2x.png
-xcordova/../build/SoundShot.app/icon@2x.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Copy cordova/../build/SoundShot.app/icon@2x.png882d395ce357b641^fad4395ce357b641^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/icon@2x.png000000000080d041^604"CpResource "SoundShot/Resources/icons/icon@2x.png" "cordova/../build/SoundShot.app/icon@2x.png"    cd /Users/wspaetzel/Projects/SoundShot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/icons/icon@2x.png" /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app36"B9243612-1079-43A9-B77B-6BEF656F78E3-
-
-CCpResource SoundShot/Resources/splash/Default-568h@2x~iphone.png cordova/../build/SoundShot.app/Default-568h@2x~iphone.png
-s374858588.262798
-e374858588.266212
-r1
-xCpResource
-xSoundShot/Resources/splash/Default-568h@2x~iphone.png
-xcordova/../build/SoundShot.app/Default-568h@2x~iphone.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Copy cordova/../build/SoundShot.app/Default-568h@2x~iphone.png4565435ce357b641^1a34445ce357b641^---0#0#0#-19%DVTDocumentLocation2@109"file://localhost/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Default-568h@2x~iphone.png000000000080d041^651"CpResource "SoundShot/Resources/splash/Default-568h@2x~iphone.png" "cordova/../build/SoundShot.app/Default-568h@2x~iphone.png"    cd /Users/wspaetzel/Projects/SoundShot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/splash/Default-568h@2x~iphone.png" /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app36"C9C8E754-7E97-410D-B4E8-ED0D7C185680-
-
-CCpResource SoundShot/Resources/splash/Default-Landscape@2x~ipad.png cordova/../build/SoundShot.app/Default-Landscape@2x~ipad.png
-s374858588.252252
-e374858588.258726
-r1
-xCpResource
-xSoundShot/Resources/splash/Default-Landscape@2x~ipad.png
-xcordova/../build/SoundShot.app/Default-Landscape@2x~ipad.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Copy cordova/../build/SoundShot.app/Default-Landscape@2x~ipad.png29b4405ce357b641^3048425ce357b641^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Default-Landscape@2x~ipad.png000000000080d041^660"CpResource "SoundShot/Resources/splash/Default-Landscape@2x~ipad.png" "cordova/../build/SoundShot.app/Default-Landscape@2x~ipad.png"    cd /Users/wspaetzel/Projects/SoundShot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/splash/Default-Landscape@2x~ipad.png" /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app36"78AFAC6A-60A6-42C6-9E17-B11D9731C3ED-
-
-CCpResource SoundShot/Resources/splash/Default-Landscape~ipad.png cordova/../build/SoundShot.app/Default-Landscape~ipad.png
-s374858588.252258
-e374858588.255637
-r1
-xCpResource
-xSoundShot/Resources/splash/Default-Landscape~ipad.png
-xcordova/../build/SoundShot.app/Default-Landscape~ipad.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Copy cordova/../build/SoundShot.app/Default-Landscape~ipad.pngfbb2405ce357b641^187d415ce357b641^---0#0#0#-19%DVTDocumentLocation2@109"file://localhost/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Default-Landscape~ipad.png000000000080d041^651"CpResource "SoundShot/Resources/splash/Default-Landscape~ipad.png" "cordova/../build/SoundShot.app/Default-Landscape~ipad.png"    cd /Users/wspaetzel/Projects/SoundShot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/splash/Default-Landscape~ipad.png" /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app36"446B9B97-604C-405E-B276-5A13502FDE58-
-
-CCpResource SoundShot/Resources/splash/Default-Portrait@2x~ipad.png cordova/../build/SoundShot.app/Default-Portrait@2x~ipad.png
-s374858588.253386
-e374858588.261374
-r1
-xCpResource
-xSoundShot/Resources/splash/Default-Portrait@2x~ipad.png
-xcordova/../build/SoundShot.app/Default-Portrait@2x~ipad.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Copy cordova/../build/SoundShot.app/Default-Portrait@2x~ipad.pngeffe405ce357b641^5ef3425ce357b641^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Default-Portrait@2x~ipad.png000000000080d041^657"CpResource "SoundShot/Resources/splash/Default-Portrait@2x~ipad.png" "cordova/../build/SoundShot.app/Default-Portrait@2x~ipad.png"    cd /Users/wspaetzel/Projects/SoundShot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/splash/Default-Portrait@2x~ipad.png" /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app36"A9794F2F-231E-4B02-BB0F-BFF9D1650663-
-
-CCpResource SoundShot/Resources/splash/Default-Portrait~ipad.png cordova/../build/SoundShot.app/Default-Portrait~ipad.png
-s374858588.255468
-e374858588.261810
-r1
-xCpResource
-xSoundShot/Resources/splash/Default-Portrait~ipad.png
-xcordova/../build/SoundShot.app/Default-Portrait~ipad.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Copy cordova/../build/SoundShot.app/Default-Portrait~ipad.pngcf85415ce357b641^e126435ce357b641^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Default-Portrait~ipad.png000000000080d041^648"CpResource "SoundShot/Resources/splash/Default-Portrait~ipad.png" "cordova/../build/SoundShot.app/Default-Portrait~ipad.png"    cd /Users/wspaetzel/Projects/SoundShot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/splash/Default-Portrait~ipad.png" /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app36"EE60D2E0-0D58-4AEB-887E-030F1B8D1976-
-
-CCpResource SoundShot/Resources/splash/Default@2x~iphone.png cordova/../build/SoundShot.app/Default@2x~iphone.png
-s374858588.256881
-e374858588.263260
-r1
-xCpResource
-xSoundShot/Resources/splash/Default@2x~iphone.png
-xcordova/../build/SoundShot.app/Default@2x~iphone.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Copy cordova/../build/SoundShot.app/Default@2x~iphone.png68ea415ce357b641^906b435ce357b641^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Default@2x~iphone.png000000000080d041^636"CpResource "SoundShot/Resources/splash/Default@2x~iphone.png" "cordova/../build/SoundShot.app/Default@2x~iphone.png"    cd /Users/wspaetzel/Projects/SoundShot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/splash/Default@2x~iphone.png" /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app36"CA3E6F3D-908D-4CE3-A71F-032514C3E251-
-
-CCpResource SoundShot/Resources/splash/Default~iphone.png cordova/../build/SoundShot.app/Default~iphone.png
-s374858588.260584
-e374858588.263939
-r1
-xCpResource
-xSoundShot/Resources/splash/Default~iphone.png
-xcordova/../build/SoundShot.app/Default~iphone.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection54"Copy cordova/../build/SoundShot.app/Default~iphone.pngaad6425ce357b641^de93435ce357b641^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Default~iphone.png000000000080d041^627"CpResource "SoundShot/Resources/splash/Default~iphone.png" "cordova/../build/SoundShot.app/Default~iphone.png"    cd /Users/wspaetzel/Projects/SoundShot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/wspaetzel/Projects/SoundShot/SoundShot/Resources/splash/Default~iphone.png" /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app36"E3EFF4F3-C3B4-40CC-96E9-F6D8E5C096A8-
-
-CCpResource www cordova/../build/SoundShot.app/www
-s374858588.217160
-e374858588.231477
-r1
-xCpResource
-xwww
-xcordova/../build/SoundShot.app/www
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Copy cordova/../build/SoundShot.app/wwwb2b8375ce357b641^234e3b5ce357b641^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/www000000000080d041^522"CpResource www cordova/../build/SoundShot.app/www    cd /Users/wspaetzel/Projects/SoundShot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/wspaetzel/Projects/SoundShot/www /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app36"7C5EDF5B-93BC-4D39-842C-2E40A37FC903-
-
-CGenerateDSYMFile /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app.dSYM /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/SoundShot
-s374858588.841434
-e374858588.960566
-r1
-xGenerateDSYMFile
-x/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app.dSYM
-x/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/SoundShot
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Generating /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app.dSYM9694d75ce357b641^c9e7f55ce357b641^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app.dSYM000000000080d041^599"GenerateDSYMFile cordova/../build/SoundShot.app.dSYM cordova/../build/SoundShot.app/SoundShot    cd /Users/wspaetzel/Projects/SoundShot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/SoundShot -o /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app.dSYM36"B4750AF5-B320-4015-B14C-94CEDE6B08A0-
-
-CLd /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/SoundShot normal i386
-s374858588.670562
-e374858588.834187
-r1
-xLd
-x/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/SoundShot
-xnormal
-xi386
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Link /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/SoundShot9fe7ab5ce357b641^8b8dd55ce357b641^---0#0#0#--1583"Ld cordova/../build/SoundShot.app/SoundShot normal i386    cd /Users/wspaetzel/Projects/SoundShot    setenv IPHONEOS_DEPLOYMENT_TARGET 4.3    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -L/Users/wspaetzel/Projects/SoundShot/cordova/../build -F/Users/wspaetzel/Projects/SoundShot/cordova/../build -filelist /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/SoundShot.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -all_load -Obj-C -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=4.3 /Users/wspaetzel/Projects/SoundShot/build/libCordova.a -framework Foundation -weak_framework UIKit -framework CoreGraphics -framework AddressBook -framework AddressBookUI -framework AudioToolbox -weak_framework AVFoundation -framework CFNetwork -framework CoreLocation -framework MediaPlayer -framework QuartzCore -framework SystemConfiguration -framework MobileCoreServices -weak_framework CoreMedia -o /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/SoundShot36"04D9DC63-C7BF-4E85-B264-2812CDF64F07-
-
-CPhaseScriptExecution "Touch www folder" /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Script-304B58A110DAC018002A0835.sh
-s374858588.183399
-e374858588.208769
-r1
-xPhaseScriptExecution
-xTouch www folder
-x/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Script-304B58A110DAC018002A0835.sh
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Run custom shell script 'Touch www folder'bfd7305ce357b641^2a71355ce357b641^---0#0#0#--19955"PhaseScriptExecution "Touch www folder" build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Script-304B58A110DAC018002A0835.sh    cd /Users/wspaetzel/Projects/SoundShot    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER wspaetzel    setenv ALWAYS_SEARCH_USER_PATHS NO    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_BIT i386    setenv ARCHS_UNIVERSAL_IPHONE_OS i386    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/wspaetzel/Projects/SoundShot/build    setenv BUILD_ROOT /Users/wspaetzel/Projects/SoundShot/build    setenv BUILD_STYLE     setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/wspaetzel/Projects/SoundShot/cordova/../build    setenv CACHE_ROOT /var/folders/b3/gb28h3551w36d8dw6_s_k46h0000gn/C/com.apple.Xcode.501    setenv CCHROOT /var/folders/b3/gb28h3551w36d8dw6_s_k46h0000gn/C/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLANG_ENABLE_OBJC_ARC NO    setenv CLANG_WARN_OBJCPP_ARC_ABI YES    setenv CLASS_FILE_DIR /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/b3/gb28h3551w36d8dw6_s_k46h0000gn/C/com.apple.Xcode.501/CompositeSDKs    setenv COMPRESS_PNG_FILES YES    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Users/wspaetzel/Projects/SoundShot/cordova/../build    setenv CONFIGURATION_TEMP_DIR /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator    setenv CONTENTS_FOLDER_PATH SoundShot.app    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING NO    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym    setenv DEFAULT_COMPILER com.apple.compilers.llvm.clang.1_0    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Applications/Xcode.app/Contents/Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Applications/Xcode.app/Contents/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/Developer/Library    setenv DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Tools    setenv DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH SoundShot.app/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/SoundShot.dst    setenv DT_TOOLCHAIN_DIR /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain    setenv DWARF_DSYM_FILE_NAME SoundShot.app.dSYM    setenv DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT NO    setenv DWARF_DSYM_FOLDER_PATH /Users/wspaetzel/Projects/SoundShot/cordova/../build    setenv EFFECTIVE_PLATFORM_NAME -iphonesimulator    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".DS_Store .svn .git .hg CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH SoundShot.app/Executables    setenv EXECUTABLE_FOLDER_PATH SoundShot.app    setenv EXECUTABLE_NAME SoundShot    setenv EXECUTABLE_PATH SoundShot.app/SoundShot    setenv FILE_LIST /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH SoundShot.app/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/wspaetzel/Projects/SoundShot/cordova/../build\" "    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME SoundShot.app    setenv GCC3_VERSION 3.3    setenv GCC_C_LANGUAGE_STANDARD c99    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES    setenv GCC_OBJC_LEGACY_DISPATCH YES    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER SoundShot/SoundShot-Prefix.pch    setenv GCC_SYMBOLS_PRIVATE_EXTERN YES    setenv GCC_THUMB_SUPPORT NO    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvm.clang.1_0    setenv GCC_VERSION_IDENTIFIER com_apple_compilers_llvm_clang_1_0    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/wspaetzel/Projects/SoundShot/cordova/../build/include\" \"/Users/wspaetzel/Projects/SoundShot/cordova/../build/usr/local/lib/include\" \"/Users/wspaetzel/Projects/SoundShot/build/UninstalledProducts/include\" \"/Users/wspaetzel/Projects/SoundShot/cordova/../build\""    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE SoundShot/SoundShot-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT binary    setenv INFOPLIST_PATH SoundShot.app/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH SoundShot.app/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/SoundShot.dst/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER wspaetzel    setenv INSTALL_PATH /Applications    setenv INSTALL_ROOT /tmp/SoundShot.dst    setenv IPHONEOS_DEPLOYMENT_TARGET 4.3    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH SoundShot.app/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/SoundShot-LinkMap-normal-i386.txt    setenv LD_NO_PIE NO    setenv LEGACY_DEVELOPER_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer    setenv LEX lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/wspaetzel/Projects/SoundShot/cordova/../build\" "    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal/i386/SoundShot.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH SoundShot.app/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 12C60    setenv MAC_OS_X_VERSION_ACTUAL 1082    setenv MAC_OS_X_VERSION_MAJOR 1080    setenv MAC_OS_X_VERSION_MINOR 0802    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJC_ABI_VERSION 2    setenv OBJECT_FILE_DIR /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Objects-normal    setenv OBJROOT /Users/wspaetzel/Projects/SoundShot/build    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_LDFLAGS "-weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -all_load -Obj-C"    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Tools:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Applications/Xcode.app/Contents/Developer/Headers /Applications/Xcode.app/Contents/Developer/SDKs /Applications/Xcode.app/Contents/Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH SoundShot.app/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS objective-c    setenv PKGINFO_FILE_PATH /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/PkgInfo    setenv PKGINFO_PATH SoundShot.app/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr    setenv PLATFORM_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform    setenv PLATFORM_NAME iphonesimulator    setenv PLATFORM_PREFERRED_ARCH i386    setenv PLATFORM_PRODUCT_BUILD_VERSION 10A403    setenv PLATFORM_VERSION_AVAILABILITY_H_FORMAT 60000    setenv PLIST_FILE_OUTPUT_FORMAT binary    setenv PLUGINS_FOLDER_PATH SoundShot.app/PlugIns    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH SoundShot.app/PrivateHeaders    setenv PRODUCT_NAME SoundShot    setenv PRODUCT_SETTINGS_PATH /Users/wspaetzel/Projects/SoundShot/SoundShot/SoundShot-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT SoundShot    setenv PROJECT_DERIVED_FILE_DIR /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/DerivedSources    setenv PROJECT_DIR /Users/wspaetzel/Projects/SoundShot    setenv PROJECT_FILE_PATH /Users/wspaetzel/Projects/SoundShot/SoundShot.xcodeproj    setenv PROJECT_NAME SoundShot    setenv PROJECT_TEMP_DIR /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build    setenv PUBLIC_HEADERS_FOLDER_PATH SoundShot.app/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_HG_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/wspaetzel/Projects/SoundShot/cordova/../build\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH SoundShot.app/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk    setenv SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk    setenv SDK_NAME iphonesimulator6.0    setenv SDK_PRODUCT_BUILD_VERSION 10A403    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHALLOW_BUNDLE YES    setenv SHARED_DERIVED_FILE_DIR /Users/wspaetzel/Projects/SoundShot/cordova/../build/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH SoundShot.app/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/b3/gb28h3551w36d8dw6_s_k46h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH SoundShot.app/SharedSupport    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT /Users/wspaetzel/Projects/SoundShot    setenv SRCROOT /Users/wspaetzel/Projects/SoundShot    setenv STRINGS_FILE_OUTPUT_ENCODING binary    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SUPPORTED_DEVICE_FAMILIES "1 2"    setenv SUPPORTED_PLATFORMS "iphonesimulator iphoneos"    setenv SYMROOT /Users/wspaetzel/Projects/SoundShot/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Applications/Xcode.app/Contents/Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Applications/Xcode.app/Contents/Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETED_DEVICE_FAMILY 1,2    setenv TARGETNAME SoundShot    setenv TARGET_BUILD_DIR /Users/wspaetzel/Projects/SoundShot/cordova/../build    setenv TARGET_NAME SoundShot    setenv TARGET_TEMP_DIR /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build    setenv TEMP_DIR /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build    setenv TEMP_FILES_DIR /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build    setenv TEMP_FILE_DIR /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build    setenv TEMP_ROOT /Users/wspaetzel/Projects/SoundShot/build    setenv TEST_AFTER_BUILD NO    setenv TOOLCHAINS com.apple.dt.toolchain.XcodeDefault    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH SoundShot.app    setenv UNSTRIPPED_PRODUCT NO    setenv USER wspaetzel    setenv USER_APPS_DIR /Users/wspaetzel/Applications    setenv USER_LIBRARY_DIR /Users/wspaetzel/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS i386    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH SoundShot.app/version.plist    setenv VERSION_INFO_BUILDER wspaetzel    setenv VERSION_INFO_FILE SoundShot_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:SoundShot  PROJECT:SoundShot-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME SoundShot.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Applications/Xcode.app/Contents/Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 4G2008a    setenv XCODE_VERSION_ACTUAL 0452    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0450    setenv YACC yacc    /bin/sh -c /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/Script-304B58A110DAC018002A0835.sh36"93041BA5-E723-4BBA-A997-C8CF753C4BD8-
-
-CProcessInfoPlistFile /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Info.plist SoundShot/SoundShot-Info.plist
-s374858588.169088
-e374858588.172507
-r1
-xProcessInfoPlistFile
-x/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Info.plist
-xSoundShot/SoundShot-Info.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection38"Process SoundShot/SoundShot-Info.plistb7622b5ce357b641^bf292c5ce357b641^---0#0#0#-19%DVTDocumentLocation2@82"file://localhost/Users/wspaetzel/Projects/SoundShot/SoundShot/SoundShot-Info.plist0000000000000000^637"ProcessInfoPlistFile cordova/../build/SoundShot.app/Info.plist SoundShot/SoundShot-Info.plist    cd /Users/wspaetzel/Projects/SoundShot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-infoPlistUtility SoundShot/SoundShot-Info.plist -genpkginfo /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app/Info.plist36"07594CF0-6A0D-4B55-8326-CBF1E31A311A-
-
-CProcessPCH /var/folders/b3/gb28h3551w36d8dw6_s_k46h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SoundShot-Prefix-csbypibkqmfyyfehliurrfwzqptb/SoundShot-Prefix.pch.pth SoundShot/SoundShot-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s374858588.274331
-e374858588.564318
-r1
-xProcessPCH
-x/var/folders/b3/gb28h3551w36d8dw6_s_k46h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SoundShot-Prefix-csbypibkqmfyyfehliurrfwzqptb/SoundShot-Prefix.pch.pth
-xSoundShot/SoundShot-Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Precompile SoundShot/SoundShot-Prefix.pchc66b465ce357b641^cd77905ce357b641^---0#0#0#-19%DVTDocumentLocation2@82"file://localhost/Users/wspaetzel/Projects/SoundShot/SoundShot/SoundShot-Prefix.pch0000000000000000^3459"ProcessPCH /var/folders/b3/gb28h3551w36d8dw6_s_k46h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SoundShot-Prefix-csbypibkqmfyyfehliurrfwzqptb/SoundShot-Prefix.pch.pth SoundShot/SoundShot-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/wspaetzel/Projects/SoundShot    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=4.3 -iquote /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/SoundShot-generated-files.hmap -I/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/SoundShot-own-target-headers.hmap -I/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/SoundShot-all-target-headers.hmap -iquote /Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/SoundShot-project-headers.hmap -I/Users/wspaetzel/Projects/SoundShot/cordova/../build/include -I/Users/wspaetzel/Projects/SoundShot/cordova/../build/usr/local/lib/include -I/Users/wspaetzel/Projects/SoundShot/build/UninstalledProducts/include -I/Users/wspaetzel/Projects/SoundShot/cordova/../build -I/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/DerivedSources/i386 -I/Users/wspaetzel/Projects/SoundShot/build/SoundShot.build/Debug-iphonesimulator/SoundShot.build/DerivedSources -F/Users/wspaetzel/Projects/SoundShot/cordova/../build --serialize-diagnostics /var/folders/b3/gb28h3551w36d8dw6_s_k46h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SoundShot-Prefix-csbypibkqmfyyfehliurrfwzqptb/SoundShot-Prefix.pch.dia -c /Users/wspaetzel/Projects/SoundShot/SoundShot/SoundShot-Prefix.pch -o /var/folders/b3/gb28h3551w36d8dw6_s_k46h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SoundShot-Prefix-csbypibkqmfyyfehliurrfwzqptb/SoundShot-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/b3/gb28h3551w36d8dw6_s_k46h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SoundShot-Prefix-csbypibkqmfyyfehliurrfwzqptb/SoundShot-Prefix.pch.d36"F4FD8087-7B7D-4419-B5B9-AD86F434A253-
-
-CTouch /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app
-s374858588.969125
-e374858588.977948
-r1
-xTouch
-x/Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Touch /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app7d3cf85ce357b641^c85bfa5ce357b641^---0#0#0#--379"Touch cordova/../build/SoundShot.app    cd /Users/wspaetzel/Projects/SoundShot    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /usr/bin/touch -c /Users/wspaetzel/Projects/SoundShot/cordova/../build/SoundShot.app36"58BA87DB-1D42-4F90-9AAB-B1A542BFEFBE-
-
