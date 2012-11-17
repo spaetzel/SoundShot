@@ -1,136 +1,154 @@
-define([
-  'jquery',
-  'underscore',
+define(['jquery', 'underscore',
 
-  'backbone', 
-  'i18n!nls/strings',
-  'text!templates/record/index.html',
-], function($, _, Backbone, strings, recordTemplate){
+'backbone', 'i18n!nls/strings', 'text!templates/record/index.html', ], function($, _, Backbone, strings, recordTemplate) {
 
   var recordIndex = Backbone.View.extend({
     tagName: 'li',
-    initialize: function(){
-      this.template = _.template( recordTemplate );
+    initialize: function() {
+      this.template = _.template(recordTemplate);
     },
 
     events: {
-      
+      'click #startRecord': 'startRecordingAudio',
+      'click #stopRecord': 'stopRecordingAudio',
+      'click #takePhoto': 'takePhoto',
+      'click #playAudio': 'playAudio'
     },
-   
-    render: function(){
-      $(this.el).html( 
-        this.template( 
-          {
-        	 
-        	}
-        ));
 
-     
-     var src= 'test.wav';
+    render: function() {
+      $(this.el).html(
+      this.template({
 
+      }));
 
-    var self = this;
-
-
-    //this.createRecordAudio();
-      
-      this.takePhoto();
 
 
       return this;
-    
 
-         
+
 
     },
-    takePhoto: function(){
-       navigator.camera.getPicture(function(imageURI) {
-          $('#previewImage').attr('src', imageURI);
+    takePhoto: function() {
+      navigator.camera.getPicture(function(imageURI) {
+        $('#previewImage').attr('src', imageURI);
+        // Resuem the recording
+        self.recordAudio();
+
       }
 
-        , this.onFail, 
-          { quality: 50, 
-    destinationType: Camera.DestinationType.FILE_URI });
+      , this.onFail, {
+        quality: 50,
+        destinationType: Camera.DestinationType.FILE_URI
+      });
 
     },
-    createRecordAudio: function(){
-       // Record some audio
-        this.createFile(src, function(fullSrc){
-          self.recordAudio(fullSrc);
-        });
+    stopRecordingAudio: function() {
+      var self = this;
+
+      self.mediaVar.stopRecord();
+      self.mediaStatus = 'stopped';
+
+      $('#stopRecord').hide();
+      $('#playAudio').show();
     },
-    createFile: function(src, callback){
-    
+    startRecordingAudio: function() {
+      $('#startRecord').hide();
+      $('#takePhoto').show();
+
+      var src = 'test.wav';
+
 
       var self = this;
 
-       //first create the file
-          window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSystem){
-              fileSystem.root.getFile(src, {
-                  create: true,
-                  exclusive: false
-              }, function(fileEntry){
-                  console.log("File " + src + " created at " + fileEntry.fullPath);
-                  mediaVar = new Media(fileEntry.fullPath, function(){
-                      console.log("Media created successfully");
-                  }, self.onError, null); //of new Media
-                  callback(mediaVar);
-              }, self.onError); //of getFile
-          }, self.onError); //of requestFileSystem
-      
+      this.setAudioPosition('Recording started');
+
+      // Record some audio
+      this.createFile(src, function() {
+
+        self.recordAudio();
+      });
+    },
+    createFile: function(src, callback) {
+
+
+      var self = this;
+
+      //first create the file
+      window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSystem) {
+        fileSystem.root.getFile(src, {
+          create: true,
+          exclusive: false
+        }, function(fileEntry) {
+          console.log("File " + src + " created at " + fileEntry.fullPath);
+          self.mediaVar = new Media(fileEntry.fullPath, function() {
+            console.log("Media created successfully");
+          }, self.onError, null); //of new Media
+          callback();
+        }, self.onError); //of getFile
+      }, self.onError); //of requestFileSystem
 
     },
-    onError: function(error){
+    onError: function(error) {
       alert(JSON.stringify(error));
     },
-    recordAudio: function(mediaRec) {
-    
- 
-        // Record audio
-        mediaRec.startRecord();
+    recordAudio: function() {
+          $('#stopRecord').show();
 
-var self = this;
+      var self = this;
 
-        // Stop recording after 10 sec
-        var recTime = 0;
-        var recInterval = setInterval(function() {
-            recTime = recTime + 1;
-            self.setAudioPosition(recTime + " sec");
-            if (recTime >= 5) {
-                clearInterval(recInterval);
-                mediaRec.stopRecord();
+      // Record audio
+      self.mediaVar.startRecord();
 
-             //           self.playAudio(mediaRec);
-            }
-        }, 1000);
+      self.mediaStatus = 'recording';
+
+      // Stop recording after 10 sec
+      var recTime = 0;
+      var recInterval = setInterval(function() {
+        recTime = recTime + 1;
+        self.setAudioPosition('Recorded ' + recTime + " seconds");
+        if( self.mediaStatus != 'recording' ) {
+
+          clearInterval(recInterval);
+   //       self.mediaVar.stopRecord();
+
+          //           self.playAudio(mediaRec);
+        }
+      }, 1000);
     },
 
 
-       playAudio: function(mediaRec) {
-    
- 
-        // Record audio
-        mediaRec.play();
+    playAudio: function() {
 
-var self = this;
+      var self = this;
 
-        // Stop recording after 10 sec
-        var recTime = 0;
-        var recInterval = setInterval(function() {
-            recTime = recTime + 1;
-            self.setAudioPosition("play " + recTime + " sec");
-            if (recTime >= 3) {
-                clearInterval(recInterval);
 
-            }
-        }, 1000);
+      // Record audio
+      self.mediaVar.play();
+
+      self.mediaStatus = 'playing';
+
+      // Stop recording after 10 sec
+      var recTime = 0;
+      var recInterval = setInterval(function() {
+        recTime = recTime + 1;
+        self.setAudioPosition("play " + recTime + " sec");
+
+        if( recTime >= self.mediaVar.getDuration() ){
+          self.setAudioPosition('Done');
+          self.mediaStatus = 'stopped';
+        }
+
+        if(self.mediaStatus != 'playing') {
+          clearInterval(recInterval);
+
+        }
+      }, 1000);
     },
 
 
-   setAudioPosition: function(position) {
-        $('#audio_position', this.el).html(position);
+    setAudioPosition: function(position) {
+      $('#audio_position', this.el).html(position);
     }
-
 
 
 
