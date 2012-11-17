@@ -4,6 +4,7 @@ require.config({
     jqueryUi: 'libs/jquery/jquery-ui.min',
     underscore: 'libs/underscore/underscore-min',
     backbone: 'libs/backbone/backbone-optamd3-min',
+    localStorage: 'libs/backbone/localStorage',
   //  cordova: 'libs/cordova/cordova',
     text: 'libs/require/text',
     i18n: 'libs/require/i18n',

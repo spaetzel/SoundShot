@@ -6,7 +6,8 @@ define([
   'router'
 ], function($, _, Backbone, Router){
   var initialize = function(){
-
+          Router.initialize();
+          
           document.addEventListener('deviceready', 
             function(){
                Router.initialize();

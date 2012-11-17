@@ -1,10 +1,10 @@
 define([
   'jquery',
   'underscore',
-  'backbone','i18n!nls/strings',
+  'backbone','localStorage', 'i18n!nls/strings',
   'text!templates/home/index.html',
   'views/record/index'
-], function($, _, Backbone, strings, homeTemplate, startRecordingView){
+], function($, _, Backbone, LocalStorage, strings, homeTemplate, startRecordingView){
 
   var indexView = Backbone.View.extend({
     tagName: 'li',
