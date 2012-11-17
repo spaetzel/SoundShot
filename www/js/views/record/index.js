@@ -34,14 +34,28 @@ define([
     try{
 
       this.createFile(src, function(fullSrc){
-        alert(fullSrc + ' '  + src);
-        self.recordAudio(fullSrc)
+
+        self.recordAudio(fullSrc);
+
+ 
+
       });
     }catch(ex)
 {
   alert('create error ' + ex);
 }
 
+/*
+    try{
+
+      this.createFile(src, function(fullSrc){
+       
+      });
+    }catch(ex)
+{
+  alert('create error ' + ex);
+}
+*/
 
       return this;
     
@@ -50,20 +64,7 @@ define([
 
     },
     createFile: function(src, callback){
-       /*
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fileSystem) {
-            fileSystem.root.getFile(src,
-                { create: true, exclusive: false }, //create if it does not exist
-                function success(entry) {
-                    var src = entry.toURI();
-                    console.log(src); //logs blank.wav's path starting with file://
-                    callback(src);
-                },
-                function fail() {}
-            );
-        }, function fail(){});
-
-*/
+    
 
 console.log("creating file");
 var self = this;
@@ -100,12 +101,36 @@ var self = this;
         var recInterval = setInterval(function() {
             recTime = recTime + 1;
             self.setAudioPosition(recTime + " sec");
-            if (recTime >= 10) {
+            if (recTime >= 5) {
                 clearInterval(recInterval);
                 mediaRec.stopRecord();
+
+                        self.playAudio(mediaRec);
             }
         }, 1000);
     },
+
+
+       playAudio: function(mediaRec) {
+    
+ 
+        // Record audio
+        mediaRec.play();
+
+var self = this;
+
+        // Stop recording after 10 sec
+        var recTime = 0;
+        var recInterval = setInterval(function() {
+            recTime = recTime + 1;
+            self.setAudioPosition("play " + recTime + " sec");
+            if (recTime >= 3) {
+                clearInterval(recInterval);
+
+            }
+        }, 1000);
+    },
+
 
    setAudioPosition: function(position) {
         $('#audio_position', this.el).html(position);
