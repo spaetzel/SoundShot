@@ -149,6 +149,26 @@ li .name{
 
 
 
+/*Recording */
+
+
+#previewImage{
+
+
+	position: absolute;
+	top: 50px!important;
+}
+
+
+#controler{
+	position: absolute;
+	bottom: 0px;
+	z-index: 100;
+	text-align: center;
+	width: 100%;
+}
+
+
 
 
 /*General Classes*/
