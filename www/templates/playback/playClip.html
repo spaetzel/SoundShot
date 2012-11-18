@@ -5,3 +5,12 @@
 
 <div id="audio_position">stopped</div>
 <img id="previewImage" src="" alt="hello world"/>
+
+<ul class="photos">
+<% _.each(photos, function(curPhoto){ %>
+	
+		<li><img src="<%= 'hi' /*curPhoto.get('localUrl')*/ %>"/></li>
+	
+
+<% }); %>
+</ul>

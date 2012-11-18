@@ -24,20 +24,37 @@ define(['jquery', 'underscore',
       return this;
     },
     takePhoto: function() {
+      var self = this;
+
       navigator.camera.getPicture(function(imageURI) {
         $('#previewImage').attr('src', imageURI);
         // Resume the recording
         //        self.recordAudio();
-        var photoModel = {
-          id: new Date().getTime(),
-          audioClip: self.model.get('id'),
-          dateTaken: new Date().getTime(),
-          localUrl: imageURI
-        };
+        alert(self.model);
 
-        var collection = new photosCollection();
+        try {
+          var photoModel = {
+            id: new Date().getTime(),
+            audioClip: self.model.id,
+            dateTaken: new Date().getTime(),
+            localUrl: imageURI
+          };
+        } catch(ex) {
+          alert('model ' + ex);
+        }
 
-        collection.create(photoModel);
+        try {
+          var collection = new photosCollection();
+          alert('coll', collection.length);
+        } catch(ex) {
+          alert(ex);
+        }
+
+        try {
+          collection.create(photoModel);
+        } catch(ex) {
+          alert('create', ex);
+        }
 
       }
 
@@ -72,17 +89,16 @@ define(['jquery', 'underscore',
 
       this.setAudioPosition('Recording started');
 
-      self.model = self.saveModel(id, src);
-
-
       // Record some audio
       this.createFile(src, function() {
-        self.model = self.saveModel(id, src);
+        self.saveModel(id, src);
 
         self.recordAudio();
       });
     },
     saveModel: function(id, src) {
+      var self = this;
+
       self.model = {
         id: id,
         src: src,
@@ -94,6 +110,7 @@ define(['jquery', 'underscore',
 
       collection.create(self.model);
 
+alert('created', self.model);
 
     },
     createFile: function(src, callback) {
