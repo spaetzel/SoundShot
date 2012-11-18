@@ -1,6 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'i18n!nls/strings', 'common', 
-  'text!templates/settings/auth500px.html'], 
-  function($, _, Backbone, strings, common, authTemplate, photosCollection) {
+define(['jquery', 'underscore', 'backbone', 'i18n!nls/strings', 'common', 'text!templates/settings/auth500px.html'], function($, _, Backbone, strings, common, authTemplate, photosCollection) {
 
   var auth500pxView = Backbone.View.extend({
     tagName: 'li',
@@ -16,7 +14,7 @@ define(['jquery', 'underscore', 'backbone', 'i18n!nls/strings', 'common',
         sdk_key: this.sdkKey
       });
 
-/*
+      /*
 
       // When the user logs in we will pull their favorite photos
       _500px.on('authorization_obtained', function() {
@@ -66,21 +64,46 @@ define(['jquery', 'underscore', 'backbone', 'i18n!nls/strings', 'common',
 
 
       // If the user has already logged in & authorized your application, this will fire an 'authorization_obtained' event
-    //  _500px.getAuthorizationStatus();
-
+      //  _500px.getAuthorizationStatus();
       return this;
     },
     login: function() {
 
-alert('auth');
+    var self = this;
+
       var url = _500px.getAuthorizationUrl('blah');
-alert(url);
-console.log('going to ' + url);
 
-       window.plugins.childBrowser.showWebPage(url);
+      console.log('going to ' + url);
 
+      window.plugins.childBrowser.showWebPage(url);
+
+
+      window.plugins.childBrowser.onLocationChange = function(loc) {
+
+        self.onLocationChange(loc);
+      };
+
+
+
+    },
+    onLocationChange: function(newLoc) {
+
+
+      if(newLoc.indexOf('token') > 0) {
+        var result = unescape(newLoc).split("#")[1];
+        result = unescape(result);
+
+        // TODO: Error Check
+        this.accessToken = result.split(",")[0].split(":")[1];
+        //this.expiresIn = result.split("&")[1].split("=")[1];
+        window.plugins.childBrowser.close();
+        
+
+        alert(this.accessToken);
+
+
+      }
     }
-
 
 
   });
