@@ -1,3 +1,97 @@
 #stopRecord, #takePhoto, #play{
 	display: none;
 }
+
+body {
+	background: rgb(69,72,77);
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(39,42,47,1) 0%,rgba(0,0,0,1) 130%);
+	height: 100%;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	}
+	
+html {  height: 100%;}
+
+	
+	
+#mainNavigation {
+list-style: none outside;
+margin: 0; padding: 0 30px;
+overflow: auto;
+
+width: 100%;
+position: absolute;
+box-sizing: border-box;
+top: 20%;
+}
+
+#mainNavigation li {
+
+box-sizing: border-box;
+text-align: center;
+display: block;
+
+
+}
+
+
+#startRecording::before{
+
+font-size: 15em;
+line-height: 1em;
+}
+
+
+#startRecording span{
+display: block;
+font-size: 1.5em;
+}
+
+
+#startRecording {
+text-decoration: none;
+display: block;
+}
+
+
+
+#viewRecordings {
+	padding: 20px;
+	display: block;
+cursor: pointer;
+}
+
+
+
+
+
+
+
+#viewSettings {
+	position: absolute;
+	bottom: 0%; right: 0%;
+text-decoration: none;
+color: #333;
+cursor: pointer;
+text-shadow: 1px 1px 0px #111;
+	padding: 20px 5px 5px 20px;}
+
+
+
+
+
+
+
+.font-icons-bef::before, .font-icons-aft::after {
+content:attr(data-icon);
+font-family:pictos;
+line-height:0;
+margin:0;
+speak:none;
+font-size: 2em;
+}
+
+.font-icons-bef span, .font-icons-aft span{
+display: none;
+}
