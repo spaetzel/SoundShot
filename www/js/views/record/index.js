@@ -30,31 +30,9 @@ define(['jquery', 'underscore',
         $('#previewImage').attr('src', imageURI);
         // Resume the recording
         //        self.recordAudio();
-        alert(self.model);
 
-        try {
-          var photoModel = {
-            id: new Date().getTime(),
-            audioClip: self.model.id,
-            dateTaken: new Date().getTime(),
-            localUrl: imageURI
-          };
-        } catch(ex) {
-          alert('model ' + ex);
-        }
 
-        try {
-          var collection = new photosCollection();
-          alert('coll', collection.length);
-        } catch(ex) {
-          alert(ex);
-        }
-
-        try {
-          collection.create(photoModel);
-        } catch(ex) {
-          alert('create', ex);
-        }
+        self.savePhoto(imageURI);
 
       }
 
@@ -63,6 +41,53 @@ define(['jquery', 'underscore',
         destinationType: Camera.DestinationType.FILE_URI
       });
 
+    },
+    savePhoto: function(imageURI) {
+      var self = this;
+
+      // Copy from the temp folder to the documents folder
+      window.resolveLocalFileSystemURI(imageURI, function(fileEntry) {
+
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSystem) {
+
+          fileEntry.copyTo(fileSystem.root, new Date().getTime() + '.jpg', function(finalEntry) {
+
+
+            self.savePhotoModel(finalEntry)
+          }, self.onError)
+        });
+
+
+      }, self.onError);
+    },
+    savePhotoModel: function(fileEntry) {
+      alert('save model ' + fileEntry.fullPath);
+
+      var self = this;
+
+      try {
+        var photoModel = {
+          id: new Date().getTime(),
+          audioClip: self.model.id,
+          dateTaken: new Date().getTime(),
+          localUrl: fileEntry.fullPath
+        };
+      } catch(ex) {
+        alert('model ' + ex);
+      }
+
+      try {
+        var collection = new photosCollection();
+   
+      } catch(ex) {
+        alert(ex);
+      }
+
+      try {
+        collection.create(photoModel);
+      } catch(ex) {
+        alert('create', ex);
+      }
     },
     stopRecordingAudio: function() {
       var self = this;
@@ -110,7 +135,7 @@ define(['jquery', 'underscore',
 
       collection.create(self.model);
 
-alert('created', self.model);
+
 
     },
     createFile: function(src, callback) {

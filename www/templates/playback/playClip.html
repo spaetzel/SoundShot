@@ -9,7 +9,7 @@
 <ul class="photos">
 <% _.each(photos, function(curPhoto){ %>
 	
-		<li><img src="<%= 'hi' /*curPhoto.get('localUrl')*/ %>"/></li>
+		<li><img src="<%= curPhoto.get('localUrl') %>"/></li>
 	
 
 <% }); %>
