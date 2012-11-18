@@ -7,6 +7,9 @@
 	font-style: normal;
 }
 
+a{
+	text-decoration: none;
+}
 
 body {
 	background: rgb(69,72,77);
@@ -150,7 +153,7 @@ max-width: auto!important;
 position: absolute;
 top: 0px; left: 0;
 
-min-width: 100%;
+width: 100%;
 }
 
 
