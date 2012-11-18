@@ -1,6 +1,6 @@
 define(['jquery', 'underscore',
 
-'backbone', 'i18n!nls/strings', 'text!templates/record/index.html', 'collections/audioClips'], function($, _, Backbone, strings, playbackTemplate, audioClipsCollection) {
+'backbone', 'i18n!nls/strings', 'text!templates/record/index.html', 'collections/audioClips', 'collections/photos'], function($, _, Backbone, strings, playbackTemplate, audioClipsCollection, photosCollection) {
 
   var recordIndex = Backbone.View.extend({
     tagName: 'li',
@@ -28,6 +28,17 @@ define(['jquery', 'underscore',
         $('#previewImage').attr('src', imageURI);
         // Resume the recording
         //        self.recordAudio();
+        var photoModel = {
+          id: new Date().getTime(),
+          audioClip: self.model.get('id'),
+          dateTaken: new Date().getTime(),
+          localUrl: imageURI
+        };
+
+        var collection = new photosCollection();
+
+        collection.create(photoModel);
+
       }
 
       , this.onFail, {
@@ -125,8 +136,7 @@ define(['jquery', 'underscore',
         if(self.mediaStatus != 'recording') {
 
           clearInterval(recInterval);
-          //       self.mediaVar.stopRecord();
-          //           self.playAudio(mediaRec);
+
         }
       }, 1000);
     },
@@ -134,30 +144,7 @@ define(['jquery', 'underscore',
 
     playAudio: function() {
 
-      var self = this;
 
-
-      // Record audio
-      self.mediaVar.play();
-
-      self.mediaStatus = 'playing';
-
-      // Stop recording after 10 sec
-      var recTime = 0;
-      var recInterval = setInterval(function() {
-        recTime = recTime + 1;
-        self.setAudioPosition("play " + recTime + " sec");
-
-        if(recTime >= self.mediaVar.getDuration()) {
-          self.setAudioPosition('Done');
-          self.mediaStatus = 'stopped';
-        }
-
-        if(self.mediaStatus != 'playing') {
-          clearInterval(recInterval);
-
-        }
-      }, 1000);
     },
 
 

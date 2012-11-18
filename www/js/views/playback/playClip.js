@@ -31,14 +31,14 @@ define(['jquery', 'underscore',
 
       var src = self.model.get('src');
 
-alert(src);
+      alert(src);
 
       if(self.mediaVar == null) {
         this.createFile(src, function() {
 
           self.playAudio();
         });
-      }else{
+      } else {
         self.playAudio();
       }
     },
@@ -72,7 +72,6 @@ alert(src);
 
       self.mediaStatus = 'playing';
 
-      // Stop recording after 10 sec
       var recTime = 0;
       var recInterval = setInterval(function() {
         recTime = recTime + 1;
