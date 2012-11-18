@@ -10,15 +10,15 @@
 
 body {
 	background: rgb(69,72,77);
-	background: -webkit-radial-gradient(center, ellipse cover,  rgba(39,42,47,1) 0%,rgba(0,0,0,1) 130%);
-	height: 100%;
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(256,256,256,1) 0%,rgba(236,236,236,1) 130%);
+
 	margin: 0;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	overflow: hidden;
 	}
 	
-html {  height: 100%; overflow: hidden;
+html {  overflow: hidden;
 }
 
 
@@ -35,7 +35,7 @@ box-sizing: border-box;
 
 
 #header .contentspan{
-border-bottom: 1px solid #333;
+border-bottom: 1px solid #ddd;
 width: 100%;
 margin: 0;
 overflow: auto;
@@ -88,6 +88,7 @@ font-size:1.5em;
 #startRecording {
 text-decoration:none;
 display:block;
+
 }
 
 #viewRecordings {
@@ -109,9 +110,9 @@ position:fixed;
 bottom:0;
 right:0;
 text-decoration:none;
-color:#333;
+color:#aaa;
 cursor:pointer;
-text-shadow:1px 1px 0 #111;
+text-shadow:1px 1px 0 #fff;
 padding:20px 5px 5px 20px;
 }
 
@@ -132,7 +133,7 @@ top: 50px!important;
 
 
 #records-list li{
-border: 1px solid #333;
+border: 1px solid #ddd;
 width: 32%;
 float: left;
 margin-right: 2%;
@@ -197,7 +198,7 @@ z-index: 10000;
 
 
 #controler .contentspan{
-border-top: 1px solid #333;
+border-top: 1px solid #eee;
 width: 100%;
 margin: 0;
 height:40px;
@@ -212,7 +213,8 @@ padding: 20px 10px 20px 10px;
 border-radius: 100%;
 
 overflow: auto;
-background: #fff;
+background: rgb(244,244,244);
+box-shadow: 0px -1px 0px #eee;
 
 }
 
@@ -227,7 +229,7 @@ top: 8px;
 
 
 #audio_position{
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(109,0,25,0.87) 0%,rgba(0,0,0,0.27) 52%,rgba(0,0,0,0.01) 74%);
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(109,0,25,0.87) 0%,rgba(256,256,256,0.27) 52%,rgba(256,256,256,0.01) 74%);
 background-repeat:no-repeat;
 width: 100%;
 background-position: center 20px; 
@@ -250,12 +252,41 @@ position:absolute;
 bottom:0;
 right:0;
 text-decoration:none;
-color:#333;
+color:#aaa;
 cursor:pointer;
-text-shadow:1px 1px 0 #111;
+text-shadow:1px 1px 0 #fff;
 padding:20px 5px 5px 20px;
 }
 
+
+
+
+
+
+
+
+.photos {position: absolute;
+top: 50px!important;
+	margin: 0; padding: 0;
+	list-style: none outside;
+}
+
+
+.photos li {
+
+	width: 32%;
+	padding: 0 15px;
+	box-sizing: border-box;
+
+	height: 75%;
+
+}
+
+.photos img {
+	max-width: 100%;
+	max-height: 100%;
+	padding: 0;margin: 0;
+}
 
 
 
