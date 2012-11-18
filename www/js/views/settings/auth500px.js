@@ -68,7 +68,7 @@ define(['jquery', 'underscore', 'backbone', 'i18n!nls/strings', 'common', 'text!
       }
     },
     storeToken: function() {
-      alert('store ' + this.accessToken);
+
 
       var authorizations = new authorizationsCollection();
 
@@ -84,7 +84,8 @@ define(['jquery', 'underscore', 'backbone', 'i18n!nls/strings', 'common', 'text!
         alert(ex);
       }
 
-      alert('done');
+      this.options.parentView.render();
+      this.options.parentView.doFindPhotos();
 
     }
     /*,

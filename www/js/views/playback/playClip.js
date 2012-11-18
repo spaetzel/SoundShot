@@ -123,7 +123,8 @@ define(['jquery', 'underscore',
     },
     authorize500px: function() {
       var view = new auth500pxView({
-        el: $(this.el)
+        el: $(this.el),
+        parentView: this
       });
 
       view.render();
@@ -147,11 +148,13 @@ define(['jquery', 'underscore',
           self.authorize500px();
 
         } else {
+          $('#findPhotos').hide();
 
           // Get my favorites
           _500px.api('/photos', {
             feature: 'user',
-            user_id: me.id
+            user_id: me.id,
+            image_size: 3
           }, function(response) {
             if(response.data.photos.length == 0) {
               alert('You have no photos.');
