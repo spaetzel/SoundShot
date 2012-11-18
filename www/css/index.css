@@ -105,7 +105,7 @@ margin-right:5px;
 }
 
 #viewSettings {
-position:absolute;
+position:fixed;
 bottom:0;
 right:0;
 text-decoration:none;
