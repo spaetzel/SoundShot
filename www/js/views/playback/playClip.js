@@ -176,6 +176,10 @@ define(['jquery', 'underscore',
               $.each(response.data.photos, function() {
                 $('#logged_in').append('<img src="' + this.image_url + '" class="photo"/>');
               });
+
+              var photos = $('.photo');
+                    $('.photo').hide();
+              $(photos[0]).show();
             }
           });
         }
