@@ -14,12 +14,16 @@ function($, _, Backbone, strings, common, itemTemplate, playClipView) {
     render: function() {
       var self = this;
 
+      var matches = _.filter(self.options.allPhotos.models, function(curPhoto) {
+        return curPhoto.get('audioClip') == self.model.get('id')
+      });
 
 
 
       $(this.el).html(
       this.template({
         model: self.model,
+        matches:  matches,
         common: common
       }));
 

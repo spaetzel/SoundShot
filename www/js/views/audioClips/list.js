@@ -1,9 +1,9 @@
 define(['jquery', 'underscore',
 'backbone', 'i18n!nls/strings', 'text!templates/audioClips/list.html', 'collections/audioClips',
-'views/audioClips/item'],
+'views/audioClips/item', 'collections/photos'],
 function($, _, 
   Backbone, strings, recordTemplate,
-   audioClipsCollection, clipItemView) {
+   audioClipsCollection, clipItemView, photosCollection) {
 
   var recordIndex = Backbone.View.extend({
     tagName: 'li',
@@ -13,10 +13,12 @@ function($, _,
     render: function() {
       var self = this;
 
+      self.allPhotos = new photosCollection();
+      self.allPhotos.fetch();
+
       var collection = new audioClipsCollection();
       collection.fetch();
 
-      _.o
 
 
       $(this.el).html(
@@ -32,8 +34,10 @@ function($, _,
       return this;
     },
     appendItem: function(item){
+      var self=this;
       var view = new clipItemView({
-        model: item
+        model: item,
+        allPhotos: self.allPhotos
       });
       $('ul', this.el).append( view.render().el );
     }

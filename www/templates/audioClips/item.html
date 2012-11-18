@@ -1,1 +1,8 @@
-<span class="name"><%= common.formatDateTime( model.get('startTime')  )%></span>
+
+<% if( matches.length > 0 ){ %>
+	<img src="<%= matches[0].get('localUrl') %>"/>
+<% }else{ %>
+<span class="name">
+	<%= common.formatDateTime( model.get('startTime')  )%>
+	</span>
+<%} %>
