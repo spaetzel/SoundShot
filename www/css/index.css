@@ -15,9 +15,11 @@ body {
 	margin: 0;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	overflow: hidden;
 	}
 	
-html {  height: 100%;}
+html {  height: 100%; overflow: hidden;
+}
 
 
 /* Header Navigation */
@@ -153,7 +155,8 @@ li .name{
 
 
 #previewImage{
-
+max-height: 50%;
+max-width: 50%;
 
 	position: absolute;
 	top: 50px!important;
