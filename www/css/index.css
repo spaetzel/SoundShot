@@ -142,3 +142,8 @@ font-size: 2em;
 .font-icons-bef span, .font-icons-aft span{
 display: none;
 }
+
+li .name{
+	margin: 10px 0;
+	font-size: 30px;
+}

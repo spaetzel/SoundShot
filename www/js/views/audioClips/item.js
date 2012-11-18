@@ -1,7 +1,7 @@
 define(['jquery', 'underscore',
-'backbone', 'i18n!nls/strings', 'text!templates/audioClips/item.html',
+'backbone', 'i18n!nls/strings', 'common', 'text!templates/audioClips/item.html',
 'views/playback/playClip'],
-function($, _, Backbone, strings, itemTemplate, playClipView) {
+function($, _, Backbone, strings, common, itemTemplate, playClipView) {
 
   var audioClipItemView = Backbone.View.extend({
     tagName: 'li',  
@@ -19,7 +19,8 @@ function($, _, Backbone, strings, itemTemplate, playClipView) {
 
       $(this.el).html(
       this.template({
-        model: self.model
+        model: self.model,
+        common: common
       }));
 
      

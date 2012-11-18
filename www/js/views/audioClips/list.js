@@ -16,12 +16,16 @@ function($, _,
       var collection = new audioClipsCollection();
       collection.fetch();
 
+      _.o
+
 
       $(this.el).html(
       this.template({
       }));
 
-      _.each(collection.models, function(curModel){
+      var sorted = _.sortBy(collection.models, function(item){ return item.get('startTime') * -1 ; });
+
+      _.each(sorted, function(curModel){
         self.appendItem( curModel );
       });
 
