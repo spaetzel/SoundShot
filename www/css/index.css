@@ -264,7 +264,7 @@ padding:20px 5px 5px 20px;
 
 /*General Classes*/
 
-#stopRecord, #takePhoto, #play, #playAudio{
+#stopRecord, #takePhoto{
 	display: none;
 	
 }
