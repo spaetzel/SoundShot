@@ -1,17 +1,27 @@
 
+<div id="controler">
+   <div class="contentspan">
+
 <a id="playAudio" class="btn btn-large">Play</a>
 <a id="pause" class="btn btn-large">Pause</a>
 <a id="stop" class="btn btn-large">Stop</a>
 <a id="findPhotos" class="btn btn-large">Find 500px photos</a>
 
-<div id="audio_position">stopped</div>
+</div></div>
+
 
 <p>Recording started <%= common.formatDateTime( startTime ) %> and ended <%=  common.formatDateTime(  endTime ) %> for a duration of <%= endTime - startTime %></p>
 
 <ul class="photos">
 <% _.each(photos, function(curPhoto){ %>
 	
-		<li><img src="<%= curPhoto.get('localUrl') %>"/></li>
+		<li>
+		
+		<div id="previewImage">
+	
+		<img src="<%= curPhoto.get('localUrl') %>"/>  
+		</div>
+		</li>
 	
 
 <% }); %>
