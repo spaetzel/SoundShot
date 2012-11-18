@@ -132,7 +132,7 @@ define(['jquery', 'underscore',
       var token = auth.get('token');
 
       var self= this;
-      
+
 
       _500px.setToken(token);
 
@@ -147,7 +147,6 @@ define(['jquery', 'underscore',
           self.authorize500px();
 
         } else {
-          alert(JSON.stringify(response));
 
           // Get my favorites
           _500px.api('/photos', {
