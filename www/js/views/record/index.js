@@ -59,7 +59,7 @@ define(['jquery', 'underscore',
       }, self.onError);
     },
     savePhotoModel: function(fileEntry) {
-      alert('save model ' + fileEntry.fullPath);
+
 
       var self = this;
 

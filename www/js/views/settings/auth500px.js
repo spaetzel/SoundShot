@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'i18n!nls/strings', 'common', 'text!templates/settings/auth500px.html'], function($, _, Backbone, strings, common, authTemplate, photosCollection) {
+define(['jquery', 'underscore', 'backbone', 'i18n!nls/strings', 'common', 'text!templates/settings/auth500px.html', 'collections/authorizations'], function($, _, Backbone, strings, common, authTemplate, authorizationsCollection) {
 
   var auth500pxView = Backbone.View.extend({
     tagName: 'li',
@@ -7,14 +7,6 @@ define(['jquery', 'underscore', 'backbone', 'i18n!nls/strings', 'common', 'text!
     },
     initialize: function() {
       this.template = _.template(authTemplate);
-      this.sdkKey = '1a7be808d667f813ad67f3a399fe5ea22efec3c0';
-
-
-      _500px.init({
-        sdk_key: this.sdkKey
-      });
-
-
 
     },
 
@@ -28,6 +20,8 @@ define(['jquery', 'underscore', 'backbone', 'i18n!nls/strings', 'common', 'text!
       this.template({
 
       }));
+
+      this.login();
 
 
       // If the user has already logged in & authorized your application, this will fire an 'authorization_obtained' event
@@ -68,35 +62,37 @@ define(['jquery', 'underscore', 'backbone', 'i18n!nls/strings', 'common', 'text!
 
         _500px.setToken(this.accessToken);
 
-        this.loggedIn();
-
+        // this.loggedIn();
+        this.storeToken();
 
       }
     },
+    storeToken: function() {
+      alert('store ' + this.accessToken);
+
+      var authorizations = new authorizationsCollection();
+
+      var attrs = {
+        id: new Date().getTime(),
+        site: '500px',
+        token: this.accessToken
+      };
+
+      try {
+        authorizations.create(attrs);
+      } catch(ex) {
+        alert(ex);
+      }
+
+      alert('done');
+
+    }
+    /*,
 
     loggedIn: function() {
       $('#not_logged_in').hide();
-      $('#logged_in').show();
-
-      // Get my user id
-      _500px.api('/users', function(response) {
-        var me = response.data.user;
-
-        // Get my favorites
-        _500px.api('/photos', {
-          feature: 'user',
-          user_id: me.id
-        }, function(response) {
-          if(response.data.photos.length == 0) {
-            alert('You have no photos.');
-          } else {
-            $.each(response.data.photos, function() {
-              $('#logged_in').append('<img src="' + this.image_url + '" />');
-            });
-          }
-        });
-      });
-    }
+     
+    }*/
 
 
   });

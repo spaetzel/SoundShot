@@ -66,3 +66,4 @@ Terminating in response to SpringBoard's termination.
 2012-11-18 12:05:31.407 SoundShot[12805:c07] View did load
 2012-11-18 12:05:31.409 SoundShot[12805:c07] Opening Url : http://500px.com
 2012-11-18 12:05:31.411 SoundShot[12805:c07] Warning: Attempt to dismiss from view controller <MainViewController: 0x896b540> while a presentation or dismiss is in progress!
+2012-11-18 13:51:50.122 SoundShot[14753:c07] Multi-tasking -> Device: YES, App: YES
