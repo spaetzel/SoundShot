@@ -166,6 +166,11 @@
     //        console.log('User did authorize the app');
     //      }
     //    });
+
+    this.getAuthorizationUrl = function(callback_function_name){
+      return site_url + 'api/js-sdk/authorize?sdk_key=' + this.sdk_key + '&callback=' + callback_function_name;
+    };
+
     this.login = function (callback) {
       if (!this.sdk_key) {
         throw "login: SDK not initialized. Use _500px.init() first.";
@@ -181,7 +186,7 @@
       left_offset = (screen.width / 2) - (1240 / 2);
       top_offset = (screen.height / 2) - (480 / 2);
 
-      window.open(site_url + 'api/js-sdk/authorize?sdk_key=' + this.sdk_key + '&callback=' + callback_function_name,
+         window.plugins.childBrowser.showWebPage(this.getAuthorizationUrl(callback_function_name),
                   '500px_js_sdk_login',
                   'width=1240,height=480,left=' + left_offset + ',top=' + top_offset + ',menu=no,location=yes,scrollbars=no,status=no,toolbar=no');
     };
@@ -359,7 +364,7 @@
         left_offset = (screen.width / 2) - (1240 / 2);
         top_offset = (screen.height / 2) - (480 / 2);
 
-        window.open(site_url + 'api/js-sdk/authorize?sdk_key=' + this.sdk_key + '&token=' + oauth_token + '&_method=delete&callback=' + callback_function_name,
+          window.plugins.childBrowser.showWebPage(site_url + 'api/js-sdk/authorize?sdk_key=' + this.sdk_key + '&token=' + oauth_token + '&_method=delete&callback=' + callback_function_name,
                     '500px_logout_window',
                     'width=1240,height=480,left=' + left_offset + ',top=' + top_offset + ',menu=no,location=yes,scrollbars=no,status=yes,toolbar=yes');
       } else {

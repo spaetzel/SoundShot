@@ -16,6 +16,7 @@ define(['jquery', 'underscore', 'backbone', 'i18n!nls/strings', 'common',
         sdk_key: this.sdkKey
       });
 
+/*
 
       // When the user logs in we will pull their favorite photos
       _500px.on('authorization_obtained', function() {
@@ -48,6 +49,8 @@ define(['jquery', 'underscore', 'backbone', 'i18n!nls/strings', 'common',
         $('#logged_in').html('');
       });
 
+*/
+
     },
 
     render: function() {
@@ -63,14 +66,19 @@ define(['jquery', 'underscore', 'backbone', 'i18n!nls/strings', 'common',
 
 
       // If the user has already logged in & authorized your application, this will fire an 'authorization_obtained' event
-      _500px.getAuthorizationStatus();
+    //  _500px.getAuthorizationStatus();
 
       return this;
     },
     login: function() {
 
-      // If the user clicks the login link, log them in
-      $('#login').click(_500px.login);
+alert('auth');
+      var url = _500px.getAuthorizationUrl('blah');
+alert(url);
+console.log('going to ' + url);
+
+       window.plugins.childBrowser.showWebPage(url);
+
     }
 
 
