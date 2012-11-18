@@ -26,9 +26,19 @@ html {  height: 100%; overflow: hidden;
 
 
 #header {
-border-bottom:1px solid #222;
-margin:0 15px 10px;
-padding:5px;
+position: absolute;
+top: 0;
+width: 100%;
+padding: 0 15px;
+box-sizing: border-box;
+}
+
+
+#header .contentspan{
+border-bottom: 1px solid #333;
+width: 100%;
+margin: 0;
+overflow: auto;
 }
 
 a.head-back {
@@ -114,6 +124,8 @@ padding:20px 5px 5px 20px;
 /*Record Lists*/
 
 #records-list{
+position: absolute;
+top: 50px!important;
 	list-style: none outside;
 	margin: 0; padding: 0 15px;
 }
@@ -154,30 +166,107 @@ li .name{
 /*Recording */
 
 
-#previewImage{
-max-height: 50%;
-max-width: 50%;
-
+#previewImage {
 	position: absolute;
 	top: 50px!important;
-}
-
-
-#controler{
-	position: absolute;
-	bottom: 0px;
-	z-index: 100;
-	text-align: center;
 	width: 100%;
+	padding: 0 15px;
+	box-sizing: border-box;
+
+	height: 75%;
+
 }
+
+#previewImage img {
+	max-width: 100%;
+	max-height: 100%;
+	padding: 0;margin: 0;
+}
+
+
+
+
+#controler {
+position: fixed;
+bottom: 0;
+width: 100%;
+padding: 0 15px;
+box-sizing: border-box;
+z-index: 10000;
+}
+
+
+#controler .contentspan{
+border-top: 1px solid #333;
+width: 100%;
+margin: 0;
+height:40px;
+text-align: center;
+}
+
+.buts{	
+text-decoration: none;
+
+line-height: 0em;
+padding: 20px 10px 20px 10px;
+border-radius: 100%;
+
+overflow: auto;
+background: #fff;
+
+}
+
+
+.buts.font-icons-bef::before{
+font-size: 3em;
+line-height:0.3em;
+position: relative;
+top: 8px;
+}
+
+
+
+#audio_position{
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(109,0,25,0.87) 0%,rgba(0,0,0,0.27) 52%,rgba(0,0,0,0.01) 74%);
+background-repeat:no-repeat;
+width: 100%;
+background-position: center 20px; 
+text-align: center;
+padding: 0px 0 20px;
+color: #444;
+
+	font-weight: 200;
+	letter-spacing: 0.2em;
+
+	position: fixed;
+	bottom: 41px; top: auto;
+}
+
+
+
+
+#cancel {
+position:absolute;
+bottom:0;
+right:0;
+text-decoration:none;
+color:#333;
+cursor:pointer;
+text-shadow:1px 1px 0 #111;
+padding:20px 5px 5px 20px;
+}
+
+
+
 
 
 
 
 /*General Classes*/
 
-#stopRecord, #takePhoto, #play{
+#stopRecord, #takePhoto, #play, #playAudio{
 	display: none;
+	
 }
 
 
