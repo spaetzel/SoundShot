@@ -1,7 +1,6 @@
 define(['jquery', 'underscore',
 
-'backbone', 'i18n!nls/strings', 'common', 'text!templates/playback/playClip.html', 'collections/photos'], 
-function($, _, Backbone, strings, common, playbackTemplate, photosCollection) {
+'backbone', 'i18n!nls/strings', 'common', 'text!templates/playback/playClip.html', 'collections/photos', 'views/settings/auth500px', 'collections/authorizations'], function($, _, Backbone, strings, common, playbackTemplate, photosCollection, auth500pxView, authorizationsCollection) {
 
   var recordIndex = Backbone.View.extend({
     tagName: 'li',
@@ -15,7 +14,8 @@ function($, _, Backbone, strings, common, playbackTemplate, photosCollection) {
     events: {
       'click #playAudio': 'startPlayingAudio',
       'click #pause': 'pause',
-      'click #stop': 'stop'
+      'click #stop': 'stop',
+      'click #findPhotos': 'findPhotos'
     },
 
     render: function() {
@@ -25,7 +25,7 @@ function($, _, Backbone, strings, common, playbackTemplate, photosCollection) {
       var allPhotos = new photosCollection();
       allPhotos.fetch();
 
-      var matches = _.filter(allPhotos.models, function(curPhoto){
+      var matches = _.filter(allPhotos.models, function(curPhoto) {
         return curPhoto.get('audioClip') == self.model.get('id')
       });
 
@@ -109,6 +109,41 @@ function($, _, Backbone, strings, common, playbackTemplate, photosCollection) {
 
     },
     stop: function() {
+
+    },
+    findPhotos: function() {
+      var auth = this.getAuthorization('500px');
+
+      if ( auth == null ){
+        this.authorize500px();
+      }else{
+        doFindPhotos(auth);
+      }
+
+    },
+    authorize500px: function(){
+      var view = new auth500pxView({
+        el: $(this.el)
+      });
+
+      view.render();
+    },
+    doFindPhotos: function(){
+
+    },
+    getAuthorization: function(site) {
+      var authorizations = new authorizationsCollection();
+      authorizations.fetch();
+
+      var matches = _.filter(authorizations.models, function(curAuth) {
+        return curAuth.get('site') == site
+      });
+
+      if(matches.length > 0) {
+        return matches[0];
+      } else {
+        return null;
+      }
 
     }
 
