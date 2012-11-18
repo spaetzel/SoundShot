@@ -24,12 +24,15 @@ define(['jquery', 'underscore',
       return this;
     },
     takePhoto: function() {
+
       var self = this;
 
+
       navigator.camera.getPicture(function(imageURI) {
-        $('#previewImage').attr('src', imageURI);
-        // Resume the recording
-        //        self.recordAudio();
+        self.stopRecordingAudio();
+
+        $('#previewImage img').attr('src', imageURI);
+
         self.savePhoto(imageURI);
 
       }
