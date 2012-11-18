@@ -13,8 +13,6 @@ define(['jquery', 'underscore',
     },
     events: {
       'click #playAudio': 'startPlayingAudio',
-      'click #pause': 'pause',
-      'click #stop': 'stop',
       'click #findPhotos': 'findPhotos'
     },
 
@@ -85,6 +83,8 @@ define(['jquery', 'underscore',
       self.mediaStatus = 'playing';
 
       var recTime = 0;
+
+      /*
       var recInterval = setInterval(function() {
         recTime = recTime + 1;
         self.setAudioPosition("play " + recTime + " sec");
@@ -98,18 +98,32 @@ define(['jquery', 'underscore',
           clearInterval(recInterval);
 
         }
-      }, 1000);
+      }, 1000);*/
+
+      var photos = $('.photo');
+
+      var index = 0;
+
+      if( photos.length > 1 ){
+      
+
+        var slideInterval = setInterval(function(){
+            $('.photo').hide();
+          $(photos[index]).show();
+
+          index++;
+
+          if( index >= photos.length ){
+            clearInterval( slideInterval );
+          }
+        }, 4000);
+
+      }
     },
 
 
     setAudioPosition: function(position) {
       $('#audio_position', this.el).html(position);
-    },
-    pause: function() {
-
-    },
-    stop: function() {
-
     },
     findPhotos: function() {
       var auth = this.getAuthorization('500px');
@@ -160,7 +174,7 @@ define(['jquery', 'underscore',
               alert('You have no photos.');
             } else {
               $.each(response.data.photos, function() {
-                $('#logged_in').append('<img src="' + this.image_url + '" />');
+                $('#logged_in').append('<img src="' + this.image_url + '" class="photo"/>');
               });
             }
           });

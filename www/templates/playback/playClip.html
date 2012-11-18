@@ -3,21 +3,22 @@
 	<div class="contentspan">
 
 
-<a id="playAudio" data-icon="4" class="buts font-icons-bef"><span>Play</span></a>
+		<a id="playAudio" data-icon="4" class="buts font-icons-bef"><span>Play</span></a>
 
-<a id="findPhotos" class="btn btn-large">Find 500px photos</a>
+		<a id="findPhotos" class="btn btn-large">Find 500px photos</a>
 
 
 	</div>
 </div>
 
-<% if( photos.length > 0 ) { %>
-	<div id="previewImage">
-	<img  src="<%= photos[0].get('localUrl') %>"/>
-	</div>
-<% } %>
+<div id="previewImage">
+	<% if( photos.length > 0 ) { %>
+
+	<img src="<%= photos[0].get('localUrl') %>" class="photo"/>
+	
+	<% } %>
 
 
 	<div id="logged_in"></div>
-
+</div>
 </ul>
