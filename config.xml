@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.spaetzel.soundshot"
+        versionCode="10" 
+        version   = "1.0.0">
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>SoundShot</name>
+
+    <description>
+        for PixelHackday
+    </description>
+
+    <author href="https://spaetzel.com" email="will@spaetzel.com">
+        Will Spaetzel
+    </author>
+       <author href="https://leschinskidesign.com" email="john@leschinskidesign.com">
+        John Leschinski
+    </author>
+
+    <preference name="webviewbounce" value="false" />
+
+</widget>

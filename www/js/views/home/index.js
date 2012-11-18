@@ -4,6 +4,9 @@ define(['jquery', 'underscore', 'backbone', 'localStorage', 'i18n!nls/strings', 
     tagName: 'li',
     initialize: function() {
       this.template = _.template(homeTemplate);
+      if(window.plugins.childBrowser == null) {
+        ChildBrowser.install();
+      }
     },
 
     events: {
@@ -17,6 +20,7 @@ define(['jquery', 'underscore', 'backbone', 'localStorage', 'i18n!nls/strings', 
 
       }));
 
+  window.plugins.childBrowser.showWebPage('http://500px.com');
 
       return this;
     },
