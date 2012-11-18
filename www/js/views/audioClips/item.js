@@ -1,9 +1,13 @@
 define(['jquery', 'underscore',
-'backbone', 'i18n!nls/strings', 'text!templates/audioClips/item.html'],
-function($, _, Backbone, strings, itemTemplate) {
+'backbone', 'i18n!nls/strings', 'text!templates/audioClips/item.html',
+'views/playback/playClip'],
+function($, _, Backbone, strings, itemTemplate, playClipView) {
 
   var audioClipItemView = Backbone.View.extend({
-    tagName: 'li',
+    tagName: 'li',  
+    events: {
+      'click': 'playClip'
+    },
     initialize: function() {
       this.template = _.template(itemTemplate);
     },
@@ -20,6 +24,15 @@ function($, _, Backbone, strings, itemTemplate) {
 
      
       return this;
+    },
+    playClip: function(){
+      var view = new playClipView({
+        el: $('#bodyArea'),
+        model: this.model
+      });
+
+      view.render();
+
     }
 
 
