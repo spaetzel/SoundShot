@@ -30,8 +30,6 @@ define(['jquery', 'underscore',
         $('#previewImage').attr('src', imageURI);
         // Resume the recording
         //        self.recordAudio();
-
-
         self.savePhoto(imageURI);
 
       }
@@ -68,7 +66,7 @@ define(['jquery', 'underscore',
       try {
         var photoModel = {
           id: new Date().getTime(),
-          audioClip: self.model.id,
+          audioClip: self.model.get('id'),
           dateTaken: new Date().getTime(),
           localUrl: fileEntry.fullPath
         };
@@ -78,7 +76,7 @@ define(['jquery', 'underscore',
 
       try {
         var collection = new photosCollection();
-   
+
       } catch(ex) {
         alert(ex);
       }
@@ -98,9 +96,12 @@ define(['jquery', 'underscore',
       $('#stopRecord').hide();
       $('#playAudio').show();
 
-      self.model.save({
-        duration: self.mediaVar.getDuration()
-      });
+  
+        self.model.save({
+          endTime: new Date().getTime()
+        });
+   
+
     },
     startRecordingAudio: function() {
       $('#startRecord').hide();
@@ -124,7 +125,7 @@ define(['jquery', 'underscore',
     saveModel: function(id, src) {
       var self = this;
 
-      self.model = {
+      var attrs = {
         id: id,
         src: src,
         startTime: new Date().getTime(),
@@ -133,7 +134,7 @@ define(['jquery', 'underscore',
 
       var collection = new audioClipsCollection();
 
-      collection.create(self.model);
+      self.model = collection.create(attrs);
 
 
 

@@ -4,7 +4,8 @@
 <a id="stop" class="btn">Stop</a>
 
 <div id="audio_position">stopped</div>
-<img id="previewImage" src="" alt="hello world"/>
+
+<p>Recording started <%= common.formatDateTime( startTime ) %> and ended <%=  common.formatDateTime(  endTime ) %> for a duration of <%= endTime - startTime %></p>
 
 <ul class="photos">
 <% _.each(photos, function(curPhoto){ %>

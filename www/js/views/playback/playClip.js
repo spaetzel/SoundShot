@@ -1,6 +1,7 @@
 define(['jquery', 'underscore',
 
-'backbone', 'i18n!nls/strings', 'text!templates/playback/playClip.html', 'collections/photos'], function($, _, Backbone, strings, playbackTemplate, photosCollection) {
+'backbone', 'i18n!nls/strings', 'common', 'text!templates/playback/playClip.html', 'collections/photos'], 
+function($, _, Backbone, strings, common, playbackTemplate, photosCollection) {
 
   var recordIndex = Backbone.View.extend({
     tagName: 'li',
@@ -28,12 +29,12 @@ define(['jquery', 'underscore',
         return curPhoto.get('audioClip') == self.model.get('id')
       });
 
-      alert(matches.length);
-
-
       $(this.el).html(
       this.template({
-        photos: matches
+        startTime: self.model.get('startTime'),
+        endTime: self.model.get('endTime'),
+        photos: matches,
+        common: common
       }));
 
 
@@ -43,8 +44,6 @@ define(['jquery', 'underscore',
       var self = this;
 
       var src = self.model.get('src');
-
-      alert(src);
 
       if(self.mediaVar == null) {
         this.createFile(src, function() {
