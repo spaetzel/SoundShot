@@ -14,40 +14,7 @@ define(['jquery', 'underscore', 'backbone', 'i18n!nls/strings', 'common', 'text!
         sdk_key: this.sdkKey
       });
 
-      /*
 
-      // When the user logs in we will pull their favorite photos
-      _500px.on('authorization_obtained', function() {
-        $('#not_logged_in').hide();
-        $('#logged_in').show();
-
-        // Get my user id
-        _500px.api('/users', function(response) {
-          var me = response.data.user;
-
-          // Get my favorites
-          _500px.api('/photos', {
-            feature: 'user_favorites',
-            user_id: me.id
-          }, function(response) {
-            if(response.data.photos.length == 0) {
-              alert('You have no favorite photos.');
-            } else {
-              $.each(response.data.photos, function() {
-                $('#logged_in').append('<img src="' + this.image_url + '" />');
-              });
-            }
-          });
-        });
-      });
-
-      _500px.on('logout', function() {
-        $('#not_logged_in').show();
-        $('#logged_in').hide();
-        $('#logged_in').html('');
-      });
-
-*/
 
     },
 
@@ -69,7 +36,7 @@ define(['jquery', 'underscore', 'backbone', 'i18n!nls/strings', 'common', 'text!
     },
     login: function() {
 
-    var self = this;
+      var self = this;
 
       var url = _500px.getAuthorizationUrl('blah');
 
@@ -97,12 +64,38 @@ define(['jquery', 'underscore', 'backbone', 'i18n!nls/strings', 'common', 'text!
         this.accessToken = result.split(",")[0].split(":")[1];
         //this.expiresIn = result.split("&")[1].split("=")[1];
         window.plugins.childBrowser.close();
-        
 
-        alert(this.accessToken);
+
+        _500px.setToken(this.accessToken);
+
+        this.loggedIn();
 
 
       }
+    },
+
+    loggedIn: function() {
+      $('#not_logged_in').hide();
+      $('#logged_in').show();
+
+      // Get my user id
+      _500px.api('/users', function(response) {
+        var me = response.data.user;
+
+        // Get my favorites
+        _500px.api('/photos', {
+          feature: 'user',
+          user_id: me.id
+        }, function(response) {
+          if(response.data.photos.length == 0) {
+            alert('You have no photos.');
+          } else {
+            $.each(response.data.photos, function() {
+              $('#logged_in').append('<img src="' + this.image_url + '" />');
+            });
+          }
+        });
+      });
     }
 
 

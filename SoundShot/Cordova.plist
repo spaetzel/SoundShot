@@ -28,7 +28,7 @@
 	<string>cloud</string>
 	<key>ExternalHosts</key>
 	<array>
-		<string></string>
+		<string>pcdn.500px.net</string>
 		<string>ajax.googleapis.com</string>
 		<string>d1ros97qkrwjf5.cloudfront.net</string>
 		<string>api.500px.com</string>

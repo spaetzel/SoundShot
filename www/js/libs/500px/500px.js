@@ -171,6 +171,10 @@
       return site_url + 'api/js-sdk/authorize?sdk_key=' + this.sdk_key + '&callback=' + callback_function_name;
     };
 
+    this.setToken = function(token){
+      oauth_token = token;
+    };
+
     this.login = function (callback) {
       if (!this.sdk_key) {
         throw "login: SDK not initialized. Use _500px.init() first.";
