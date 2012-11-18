@@ -1,22 +1,3 @@
-#stopRecord, #takePhoto, #play{
-	display: none;
-}
-
-
-
-
-@font-face {
-    font-family: 'ModernPictogramsNormal';
-    src: url('lib/modern-pictograms/modernpics-webfont.eot');
-    src: url('lib/modern-pictograms/modernpics-webfont.eot?#iefix') format('embedded-opentype'),
-         url('lib/modern-pictograms/modernpics-webfont.woff') format('woff'),
-         url('lib/modern-pictograms/modernpics-webfont.ttf') format('truetype'),
-         url('lib/modern-pictograms/modernpics-webfont.svg#ModernPictogramsNormal') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 
 @font-face {
 	font-family: 'Pictos';
@@ -25,8 +6,6 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
-
 
 
 body {
@@ -40,74 +19,88 @@ body {
 	
 html {  height: 100%;}
 
-#header{
-	padding:5px 5px;
-	margin: 0 15px 10px 15px;
-border-bottom: 1px solid #222;
-   }	
+
+/* Header Navigation */
+
+
+#header {
+border-bottom:1px solid #222;
+margin:0 15px 10px;
+padding:5px;
+}
+
+a.head-back {
+color:#555;
+display:inline-block;
+text-decoration:none;
+letter-spacing:.1em;
+padding:10px 0;
+}
+
+
+
+
+
 	
-	
-	a.head-back{
-		color: #444;
-		padding: 10px 0;
-		display: inline-block;
-		text-decoration: none;
-		letter-spacing: 0.1em;
-	}	
+/*Home Page*/	
 	
 	
 #mainNavigation {
-list-style: none outside;
-margin: 0; padding: 0 30px;
-overflow: auto;
-
-width: 100%;
-position: absolute;
-box-sizing: border-box;
+list-style:none outside;
+overflow:auto;
+width:100%;
+position:absolute;
+box-sizing:border-box;
 top:15%;
+margin:0;
+padding:0 30px;
 }
 
 #mainNavigation li {
-
-box-sizing: border-box;
-text-align: center;
-display: block;
-
-
+box-sizing:border-box;
+text-align:center;
+display:block;
 }
 
-
-#startRecording::before{
-
-font-size: 15em;
-line-height: 1em;
+#startRecording::before {
+font-size:15em;
+line-height:1em;
 }
 
-
-#startRecording span{
-display: block;
-font-size: 1.5em;
+#startRecording span {
+display:block;
+letter-spacing:.1em;
+font-size:1.5em;
 }
-
 
 #startRecording {
-text-decoration: none;
-display: block;
+text-decoration:none;
+display:block;
 }
-
-
 
 #viewRecordings {
-	padding: 10px 20px 20px 20px;
-	display: block;
-cursor: pointer;
-margin-top: 10px;
-text-decoration: none;
+display:block;
+cursor:pointer;
+margin-top:10px;
+text-decoration:none;
+letter-spacing:.1em;
+padding:10px 20px 20px;
 }
-
 
 #viewRecordings::before {
-font-size: 1em; margin-right: 5px;
+font-size:1em;
+margin-right:5px;
+}
+
+#viewSettings {
+position:absolute;
+bottom:0;
+right:0;
+text-decoration:none;
+color:#333;
+cursor:pointer;
+text-shadow:1px 1px 0 #111;
+padding:20px 5px 5px 20px;
 }
 
 
@@ -115,17 +108,54 @@ font-size: 1em; margin-right: 5px;
 
 
 
-#viewSettings {
-	position: absolute;
-	bottom: 0%; right: 0%;
-text-decoration: none;
-color: #333;
-cursor: pointer;
-text-shadow: 1px 1px 0px #111;
-	padding: 20px 5px 5px 20px;}
+
+/*Record Lists*/
+
+#records-list{
+	list-style: none outside;
+	margin: 0; padding: 0 15px;
+}
+
+
+#records-list li{
+border: 1px solid #333;
+width: 32%;
+float: left;
+margin-right: 2%;
+box-sizing: border-box;
+height: 100px;
+margin-bottom: 2%;
+overflow: hidden;
+position: relative;
+}
+
+
+#records-list li img{
+max-width: auto!important;
+position: absolute;
+top: 0px; left: 0;
+height: 100%;
+}
+
+
+#records-list li:nth-child(3n){margin-right: 0;}
+
+
+li .name{
+	margin: 10px 0;
+	font-size: 30px;
+}
 
 
 
+
+
+
+/*General Classes*/
+
+#stopRecord, #takePhoto, #play{
+	display: none;
+}
 
 
 
@@ -143,7 +173,4 @@ font-size: 2em;
 display: none;
 }
 
-li .name{
-	margin: 10px 0;
-	font-size: 30px;
-}
+
