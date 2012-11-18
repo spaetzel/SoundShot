@@ -78,14 +78,12 @@ define(['jquery', 'underscore', 'backbone', 'i18n!nls/strings', 'common', 'text!
         token: this.accessToken
       };
 
-      try {
-        authorizations.create(attrs);
-      } catch(ex) {
-        alert(ex);
-      }
+ 
+       var auth= authorizations.create(attrs);
+     
 
       this.options.parentView.render();
-      this.options.parentView.doFindPhotos();
+      this.options.parentView.doFindPhotos(auth);
 
     }
     /*,
