@@ -2,6 +2,33 @@
 	display: none;
 }
 
+
+
+
+@font-face {
+    font-family: 'ModernPictogramsNormal';
+    src: url('lib/modern-pictograms/modernpics-webfont.eot');
+    src: url('lib/modern-pictograms/modernpics-webfont.eot?#iefix') format('embedded-opentype'),
+         url('lib/modern-pictograms/modernpics-webfont.woff') format('woff'),
+         url('lib/modern-pictograms/modernpics-webfont.ttf') format('truetype'),
+         url('lib/modern-pictograms/modernpics-webfont.svg#ModernPictogramsNormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+	font-family: 'Pictos';
+	src: url('../../fonts/pictos/pictos-web.eot');
+	src: local('☺'), url('../../fonts/pictos/pictos-web.woff') format('woff'), url('../../fonts/pictos/pictos-web.ttf') format('truetype'), url('../../fonts/pictos/pictos-web.svg#webfontIyfZbseF') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+
 body {
 	background: rgb(69,72,77);
 	background: -webkit-radial-gradient(center, ellipse cover,  rgba(39,42,47,1) 0%,rgba(0,0,0,1) 130%);
@@ -13,6 +40,20 @@ body {
 	
 html {  height: 100%;}
 
+#header{
+	padding:5px 5px;
+	margin: 0 15px 10px 15px;
+border-bottom: 1px solid #222;
+   }	
+	
+	
+	a.head-back{
+		color: #444;
+		padding: 10px 0;
+		display: inline-block;
+		text-decoration: none;
+		letter-spacing: 0.1em;
+	}	
 	
 	
 #mainNavigation {
@@ -23,7 +64,7 @@ overflow: auto;
 width: 100%;
 position: absolute;
 box-sizing: border-box;
-top: 20%;
+top:15%;
 }
 
 #mainNavigation li {
@@ -57,11 +98,17 @@ display: block;
 
 
 #viewRecordings {
-	padding: 20px;
+	padding: 10px 20px 20px 20px;
 	display: block;
 cursor: pointer;
+margin-top: 10px;
+text-decoration: none;
 }
 
+
+#viewRecordings::before {
+font-size: 1em; margin-right: 5px;
+}
 
 
 
