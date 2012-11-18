@@ -8,21 +8,12 @@
 	</div>
 </div>
 
+<% if( photos.length > 0 ) { %>
+	<div id="previewImage">
+	<img  src="<%= photos[0].get('localUrl') %>"/>
+	</div>
+<% } %>
 
-
-<ul class="photos">
-	<% _.each(photos, function(curPhoto){ %>
-
-	<li>
-
-		<div id="previewImage">
-
-			<img src="<%= curPhoto.get('localUrl') %>"/>  
-		</div>
-	</li>
-
-
-	<% }); %>
 
 	<div id="logged_in"></div>
 
