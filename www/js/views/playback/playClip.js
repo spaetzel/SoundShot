@@ -1,6 +1,6 @@
 define(['jquery', 'underscore',
 
-'backbone', 'i18n!nls/strings', 'text!templates/playback/playClip.html', 'collections/photos'], function($, _, Backbone, strings, playbackTemplate, photosCollection) {
+'backbone', 'i18n!nls/strings', 'common', 'text!templates/playback/playClip.html', 'collections/photos', 'views/settings/auth500px', 'collections/authorizations'], function($, _, Backbone, strings, common, playbackTemplate, photosCollection, auth500pxView, authorizationsCollection) {
 
   var recordIndex = Backbone.View.extend({
     tagName: 'li',
@@ -14,7 +14,8 @@ define(['jquery', 'underscore',
     events: {
       'click #playAudio': 'startPlayingAudio',
       'click #pause': 'pause',
-      'click #stop': 'stop'
+      'click #stop': 'stop',
+      'click #findPhotos': 'findPhotos'
     },
 
     render: function() {
@@ -24,16 +25,16 @@ define(['jquery', 'underscore',
       var allPhotos = new photosCollection();
       allPhotos.fetch();
 
-      var matches = _.filter(allPhotos.models, function(curPhoto){
+      var matches = _.filter(allPhotos.models, function(curPhoto) {
         return curPhoto.get('audioClip') == self.model.get('id')
       });
 
-      alert(matches.length);
-
-
       $(this.el).html(
       this.template({
-        photos: matches
+        startTime: self.model.get('startTime'),
+        endTime: self.model.get('endTime'),
+        photos: matches,
+        common: common
       }));
 
 
@@ -43,8 +44,6 @@ define(['jquery', 'underscore',
       var self = this;
 
       var src = self.model.get('src');
-
-      alert(src);
 
       if(self.mediaVar == null) {
         this.createFile(src, function() {
@@ -110,6 +109,41 @@ define(['jquery', 'underscore',
 
     },
     stop: function() {
+
+    },
+    findPhotos: function() {
+      var auth = this.getAuthorization('500px');
+
+      if ( auth == null ){
+        this.authorize500px();
+      }else{
+        doFindPhotos(auth);
+      }
+
+    },
+    authorize500px: function(){
+      var view = new auth500pxView({
+        el: $(this.el)
+      });
+
+      view.render();
+    },
+    doFindPhotos: function(){
+
+    },
+    getAuthorization: function(site) {
+      var authorizations = new authorizationsCollection();
+      authorizations.fetch();
+
+      var matches = _.filter(authorizations.models, function(curAuth) {
+        return curAuth.get('site') == site
+      });
+
+      if(matches.length > 0) {
+        return matches[0];
+      } else {
+        return null;
+      }
 
     }
 

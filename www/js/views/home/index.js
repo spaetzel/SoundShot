@@ -4,6 +4,9 @@ define(['jquery', 'underscore', 'backbone', 'localStorage', 'i18n!nls/strings', 
     tagName: 'li',
     initialize: function() {
       this.template = _.template(homeTemplate);
+      if(window.plugins != null && window.plugins.childBrowser == null) {
+        ChildBrowser.install();
+      }
     },
 
     events: {
@@ -17,6 +20,14 @@ define(['jquery', 'underscore', 'backbone', 'localStorage', 'i18n!nls/strings', 
 
       }));
 
+/*
+    window.plugins.childBrowser.showWebPage('http://500px.com', { showLocationBar: true });
+
+setTimeout(function(){
+    window.plugins.childBrowser.close();
+}, 1000);
+
+*/
 
       return this;
     },

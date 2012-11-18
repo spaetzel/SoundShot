@@ -27,9 +27,17 @@
 	<key>BackupWebStorage</key>
 	<string>cloud</string>
 	<key>ExternalHosts</key>
-	<array/>
+	<array>
+		<string>pcdn.500px.net</string>
+		<string>ajax.googleapis.com</string>
+		<string>d1ros97qkrwjf5.cloudfront.net</string>
+		<string>api.500px.com</string>
+		<string>500px.com</string>
+	</array>
 	<key>Plugins</key>
 	<dict>
+		<key>ChildBrowserCommand</key>
+		<string>ChildBrowserCommand</string>
 		<key>Device</key>
 		<string>CDVDevice</string>
 		<key>Logger</key>
